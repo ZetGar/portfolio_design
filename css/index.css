@@ -313,7 +313,7 @@ footer {
   width: 100vw;
   height: 50px;
   text-align: center;
-  border-top: 1px solid #000;
+  margin-top: 30px;
 }
 
 footer .ft_wrap {
@@ -336,8 +336,9 @@ footer .ft_wrap > h2 > a {
 
 footer .ft_wrap > address {
   padding: 10px 0;
-  color: #616161;
+  color: #927e6a;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 footer .ft_wrap > p > a {
@@ -538,77 +539,143 @@ section.aboutme > .container > .skill > .codding > ul > li > div > span.j:after 
   width: 70%;
 }
 
-section.contact {
-  background-color: #496b60;
-}
-
-section.contact .container {
+section.portfolio > .container > div {
   display: flex;
   justify-content: space-between;
 }
 
-section.contact .container > h5 {
+section.portfolio > .container > div > .btn {
+  width: 30%;
+}
+
+section.portfolio > .container > div > .btn > p {
+  width: 100px;
+  height: 25px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+section.portfolio > .container > div > .btn > p:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+section.portfolio > .container > div > .btn > p > a {
+  display: block;
+  color: #496b60;
+  border: 2px solid #496b60;
+  border-radius: 5rem;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+section.portfolio > .container > div > .btn > p > a:hover {
+  color: #fff;
+  background-color: #496b60;
+}
+
+section.portfolio > .container > div > .content {
+  width: 70%;
+}
+
+section.portfolio > .container > div > .content > ol {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+section.portfolio > .container > div > .content > ol > li > a {
+  display: block;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+section#contact {
+  background-color: #496b60;
+}
+
+section#contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#contact .container > h5 {
   color: #fff;
 }
 
-section.contact .container > h5::after {
+section#contact .container > h5::after {
   border-bottom: 3px solid #fff;
 }
 
-section.contact .container > div {
+section#contact .container > div {
   display: flex;
   justify-content: space-between;
   width: 70%;
 }
 
-section.contact .container > div > .content {
-  width: 60%;
+section#contact .container > div > .content {
+  width: 50%;
   color: #fff;
 }
 
-section.contact .container > div > .content > h2 {
+section#contact .container > div > .content > h2 {
   font-size: 2.8rem;
 }
 
-section.contact .container > div > .content > p {
+section#contact .container > div > .content > p {
   font-size: 1rem;
   line-height: 2.5rem;
 }
 
-section.contact .container > div > .content > .ct_btn {
+section#contact .container > div > .content > .ct_btn {
+  margin-top: 40px;
+}
+
+section#contact .container > div > .content > .ct_btn > p {
   display: flex;
   justify-content: start;
-  flex-wrap: wrap;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #314e45;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 30px;
 }
 
-section.contact .container > div > .content > .ct_btn > p {
-  margin-bottom: 15px;
+section#contact .container > div > .content > .ct_btn > p:nth-of-type(3) > a {
+  margin-left: 10px;
 }
 
-section.contact .container > div > .content > .ct_btn > p > a {
+section#contact .container > div > .content > .ct_btn > p:nth-of-type(3) > a:nth-of-type(1) {
+  margin-right: 15px;
+}
+
+section#contact .container > div > .content > .ct_btn > p > a {
   display: block;
   height: 30px;
-  padding: 0 20px;
-  margin-right: 20px;
+  padding: 0 10px;
+  margin-left: 25px;
   color: #fff;
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
   line-height: 30px;
-  border: 1px solid #fff;
   border-radius: 5rem;
   box-sizing: border-box;
 }
 
-section.contact .container > div > .content > .ct_btn > p > a:hover {
+section#contact .container > div > .content > .ct_btn > p > a:hover {
   background-color: #314e45;
 }
 
-section.contact .container > div > .visual {
-  width: 30%;
-  height: 200px;
+section#contact .container > div > .visual {
+  width: 45%;
+  height: 250px;
   background-image: url(./../images/main.png);
-  background-size: contain;
+  background-size: 80%;
+  background-position: center -2rem;
   background-repeat: no-repeat;
 }
