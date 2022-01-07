@@ -9,6 +9,7 @@ $mobile: "screen and (max-width:768px)";
   background-color: rgb(238, 222, 202);
   overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -461,9 +462,11 @@ section.main {
           text-align: center;
           font-weight: 600;
           line-height: 30px;
-          border: 1px solid #927e6a;
+          border: 1.5px solid #927e6a;
           border-radius: 5rem;
           box-sizing: border-box;
+
+          transition: all 0.5s;
 
           &:hover {
             color: #fff;
@@ -484,7 +487,7 @@ section.main {
 }
 
 section.aboutme {
-  padding: 5rem 0 13rem;
+  padding: 13rem 0;
   background-color: #e0d0bd;
   > .container {
     display: flex;
@@ -638,6 +641,8 @@ section.aboutme {
 }
 
 section.portfolio {
+  padding: 13rem 0;
+
   background-image: url(./../images/port_back.png);
   > .container {
     > div {
@@ -660,16 +665,19 @@ section.portfolio {
           }
           > a {
             display: block;
-            color: #496b60;
 
-            border: 2px solid #496b60;
+            width: 120px;
+
+            color: #758c72;
+
+            border: 1.5px solid #758c72;
             border-radius: 5rem;
             box-sizing: border-box;
             transition: all 0.5s;
 
             &:hover {
               color: #fff;
-              background-color: #496b60;
+              background-color: #758c72;
             }
           }
         }

@@ -6,6 +6,7 @@
   background-color: #eedeca;
   overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -420,9 +421,10 @@ section.main > .container > .gnb > li > a {
   text-align: center;
   font-weight: 600;
   line-height: 30px;
-  border: 1px solid #927e6a;
+  border: 1.5px solid #927e6a;
   border-radius: 5rem;
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 section.main > .container > .gnb > li > a:hover {
@@ -437,7 +439,7 @@ section.main > .container > .gnb > li:nth-of-type(3) > a:hover {
 }
 
 section.aboutme {
-  padding: 5rem 0 13rem;
+  padding: 13rem 0;
   background-color: #e0d0bd;
 }
 
@@ -578,6 +580,7 @@ section.aboutme > .container > .skill > .codding > ul > li > div > span.j:after 
 }
 
 section.portfolio {
+  padding: 13rem 0;
   background-image: url(./../images/port_back.png);
 }
 
@@ -605,8 +608,9 @@ section.portfolio > .container > div > .btn > p:nth-of-type(2) {
 
 section.portfolio > .container > div > .btn > p > a {
   display: block;
-  color: #496b60;
-  border: 2px solid #496b60;
+  width: 120px;
+  color: #758c72;
+  border: 1.5px solid #758c72;
   border-radius: 5rem;
   box-sizing: border-box;
   transition: all 0.5s;
@@ -614,7 +618,7 @@ section.portfolio > .container > div > .btn > p > a {
 
 section.portfolio > .container > div > .btn > p > a:hover {
   color: #fff;
-  background-color: #496b60;
+  background-color: #758c72;
 }
 
 section.portfolio > .container > div > .content {
