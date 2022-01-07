@@ -420,9 +420,21 @@ section {
         border-bottom: 3px solid #927e6a;
       }
     }
+    p {
+      margin-bottom: 10px;
+
+      color: #635749;
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
   }
 }
 section.main {
+  height: 700px;
+  background-image: url(./../images/main_back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   > .container {
     h2 {
       width: 1000px;
@@ -596,6 +608,7 @@ section.aboutme {
 }
 
 section.portfolio {
+  background-image: url(./../images/port_back.png);
   > .container {
     > div {
       display: flex;
@@ -683,6 +696,7 @@ section#contact {
           font-size: 2.8rem;
         }
         > p {
+          color: #fff;
           font-size: 1rem;
           line-height: 2.5rem;
         }

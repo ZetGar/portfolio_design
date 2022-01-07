@@ -384,6 +384,21 @@ section > .container h5::after {
   border-bottom: 3px solid #927e6a;
 }
 
+section > .container p {
+  margin-bottom: 10px;
+  color: #635749;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+section.main {
+  height: 700px;
+  background-image: url(./../images/main_back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 section.main > .container h2 {
   width: 1000px;
   padding: 15rem 0 5rem;
@@ -539,6 +554,10 @@ section.aboutme > .container > .skill > .codding > ul > li > div > span.j:after 
   width: 70%;
 }
 
+section.portfolio {
+  background-image: url(./../images/port_back.png);
+}
+
 section.portfolio > .container > div {
   display: flex;
   justify-content: space-between;
@@ -627,6 +646,7 @@ section#contact .container > div > .content > h2 {
 }
 
 section#contact .container > div > .content > p {
+  color: #fff;
   font-size: 1rem;
   line-height: 2.5rem;
 }
