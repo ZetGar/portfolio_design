@@ -25,9 +25,9 @@ header {
   height: 50px;
   padding-top: 20px;
 
-  background-color: rgb(238, 222, 202);
+  // background-color: rgb(238, 222, 202);
 
-  border-bottom: 1px solid #000;
+  // border-bottom: 1px solid #000;
 
   > .hd_content {
     // display: flex;
@@ -447,8 +447,22 @@ section.main {
       display: flex;
       justify-content: space-between;
 
-      width: 300px;
+      width: 450px;
       margin: 0 auto;
+
+      > li {
+        > a {
+          display: block;
+          width: 130px;
+          height: 25px;
+
+          font-size: 1.2rem;
+          text-align: center;
+          line-height: 25px;
+          border: 1px solid #000;
+          border-radius: 5rem;
+        }
+      }
     }
   }
 }

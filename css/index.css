@@ -20,8 +20,6 @@ header {
   width: 100vw;
   height: 50px;
   padding-top: 20px;
-  background-color: #eedeca;
-  border-bottom: 1px solid #000;
 }
 
 header > .hd_content {
@@ -409,8 +407,19 @@ section.main > .container h2 {
 section.main > .container > .gnb {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 450px;
   margin: 0 auto;
+}
+
+section.main > .container > .gnb > li > a {
+  display: block;
+  width: 130px;
+  height: 25px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid #000;
+  border-radius: 5rem;
 }
 
 section.aboutme {
