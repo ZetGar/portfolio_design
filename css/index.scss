@@ -696,12 +696,104 @@ section.portfolio {
           > li {
             > a {
               display: block;
+              position: relative;
 
               width: 220px;
               height: 220px;
               margin-bottom: 20px;
 
+              // text-indent: -9999px;
               background-color: #fff;
+
+              overflow: hidden;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 220px;
+                width: 220px;
+                height: 220px;
+                background-color: rgba(99, 87, 73, 0.753);
+                transition: all 0.7s;
+              }
+
+              > div {
+                position: absolute;
+                top: 220px;
+                top: 10px;
+                left: 10px;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #fff;
+
+                color: #fff;
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 220px;
+
+                opacity: 0;
+
+                transition: all 0.5s 0.6s;
+
+                > h4 {
+                  opacity: 0;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  text-align: center;
+
+                  transition: all 0.5s 0.5s;
+                }
+              }
+
+              &:hover {
+                &::before {
+                  top: 0;
+                }
+                > div {
+                  opacity: 1;
+
+                  > h4 {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(1) {
+              > a {
+                background-image: url(./../images/백일우.jpg);
+                background-size: 200%;
+                background-position: center center;
+              }
+            }
+            &:nth-of-type(2) {
+              > a {
+                background-image: url(./../images/주민기획.jpg);
+                background-size: 150%;
+                background-position: center center;
+              }
+            }
+            &:nth-of-type(3) {
+              > a {
+                background-image: url(./../images/펍지.jpg);
+                background-size: 140%;
+                background-position: center center;
+              }
+            }
+            &:nth-of-type(4) {
+              > a {
+                background-image: url(./../images/위드랜드.jpg);
+                background-size: 155%;
+                background-position: center center;
+              }
+            }
+            &:nth-of-type(6) {
+              > a {
+                background-image: url(./../images/글로벌매거진.jpg);
+                background-size: 210%;
+                background-position: center -90px;
+              }
             }
           }
         }
