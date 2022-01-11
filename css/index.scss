@@ -408,6 +408,10 @@ section {
     width: 1000px;
     margin: 0 auto;
 
+    @media #{$mobile} {
+      width: 100vw;
+    }
+
     h5 {
       color: #927e6a;
       font-size: 1.2rem;
@@ -419,6 +423,10 @@ section {
         width: 10px;
         margin-top: 10px;
         border-bottom: 3px solid #927e6a;
+
+        @media #{$mobile} {
+          margin: 10px auto 0;
+        }
       }
     }
     p {
@@ -431,18 +439,31 @@ section {
     }
   }
 }
+
 section.main {
   height: 700px;
   background-image: url(./../images/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media #{$mobile} {
+    height: 600px;
+    padding: 0;
+    background-size: 750%;
+    background-position: -40rem center;
+  }
   > .container {
     h2 {
-      width: 1000px;
       padding: 25rem 0 5rem;
 
       font-size: 6rem;
       text-align: center;
+
+      @media #{$mobile} {
+        padding: 18rem 0 5rem;
+        font-size: 4rem;
+        font-weight: 800;
+      }
     }
     > .gnb {
       display: flex;
@@ -451,7 +472,15 @@ section.main {
       width: 450px;
       margin: 0 auto;
 
+      @media #{$mobile} {
+        flex-direction: column;
+        width: 100vw;
+      }
+
       > li {
+        @media #{$mobile} {
+          margin-bottom: 15px;
+        }
         > a {
           display: block;
           width: 130px;
@@ -475,6 +504,10 @@ section.main {
             background-color: #758c72;
             border: none;
           }
+
+          @media #{$mobile} {
+            margin: 0 auto;
+          }
         }
         &:nth-of-type(3) {
           > a:hover {
@@ -493,13 +526,31 @@ section.aboutme {
     display: flex;
     justify-content: space-between;
 
+    @media #{$mobile} {
+      flex-direction: column;
+      padding: 0 30px;
+      box-sizing: border-box;
+
+      text-align: center;
+    }
+
     > .interveiw {
       width: 30%;
     }
+
     > .skill {
       width: 70%;
 
+      @media #{$mobile} {
+        width: 100%;
+        margin-top: 100px;
+      }
+
       > div {
+        @media #{$mobile} {
+          width: 100%;
+        }
+
         > h3 {
           margin-bottom: 30px;
 
@@ -507,15 +558,35 @@ section.aboutme {
           font-size: 1.7rem;
           line-height: 25px;
           font-weight: 800;
+
+          @media #{$mobile} {
+            width: 90%;
+            margin: 0 auto;
+            border-bottom: 1px solid #635749;
+          }
         }
+
         ul {
           display: flex;
           justify-content: space-between;
           margin: 2rem 0;
 
+          @media #{$mobile} {
+            flex-direction: column;
+          }
+
           li {
             width: calc(100% / 3 - 30px);
+
+            @media #{$mobile} {
+              margin: 0 auto;
+              width: 85%;
+            }
+
             > div {
+              @media #{$mobile} {
+                margin-top: 20px;
+              }
               > p {
                 margin-bottom: 7px;
 
@@ -523,6 +594,7 @@ section.aboutme {
                 font-size: 1.2rem;
                 font-weight: 800;
               }
+
               > span {
                 position: relative;
                 display: block;
@@ -538,12 +610,12 @@ section.aboutme {
                   position: absolute;
                   left: -100%;
 
-                  // width: 95%;
+                  width: 95%;
                   height: 10px;
 
                   background-color: #496b60;
                   border-radius: 3rem;
-                  animation: bar 2s ease-in-out 0.5s forwards;
+                  animation: bar 2s ease-in-out 0.25s forwards;
 
                   @keyframes bar {
                     0% {
@@ -558,80 +630,94 @@ section.aboutme {
             }
           }
         }
-      }
 
-      > .design {
-        > ul > li > div > span {
-          &.de:after {
-            width: 95%;
-          }
-          &.p:after {
-            width: 90%;
-          }
-        }
-        > div {
-          margin-top: 40px;
-          border-top: 1px dotted #927e6a;
-          > div {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0 20px;
-
-            > h6 {
-              width: 15%;
-              height: 25px;
-
-              color: #fff;
-              line-height: 25px;
-              text-align: center;
-
-              background-color: #927e6a;
-              border-radius: 5rem;
+        &.design {
+          > ul > li > div > span {
+            .p:after {
+              width: 90%;
             }
-            > ol {
+          }
+
+          > div {
+            margin-top: 40px;
+            border-top: 1px dotted #927e6a;
+            > div {
               display: flex;
-              justify-content: start;
-              flex-wrap: wrap;
-              width: 80%;
+              justify-content: space-between;
+              margin: 20px 0 20px;
 
-              li {
-                width: 100px;
+              @media #{$mobile} {
+                flex-direction: column;
+              }
+              > h6 {
+                width: 15%;
                 height: 25px;
-                margin: 0 10px 15px 0;
 
-                color: #927e6a;
+                color: #fff;
                 line-height: 25px;
                 text-align: center;
-                font-weight: 600;
 
-                border: 1px solid #927e6a;
+                background-color: #927e6a;
                 border-radius: 5rem;
 
-                box-sizing: border-box;
+                @media #{$mobile} {
+                  width: 50%;
+                  margin: 0 auto;
+                }
+              }
+              > ol {
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+                width: 80%;
+
+                @media #{$mobile} {
+                  width: 100%;
+                  margin-top: 20px;
+                }
+
+                li {
+                  width: 100px;
+                  height: 25px;
+                  margin: 0 10px 15px 0;
+
+                  color: #927e6a;
+                  line-height: 25px;
+                  text-align: center;
+                  font-weight: 600;
+
+                  border: 1px solid #927e6a;
+                  border-radius: 5rem;
+
+                  box-sizing: border-box;
+
+                  @media #{$mobile} {
+                    width: calc(100% / 3 - 10px);
+                  }
+                }
               }
             }
           }
         }
-      }
 
-      > .codding {
-        margin-top: 13rem;
-        > ul > li > div > span {
-          &.cd {
-            width: 100%;
-            &:after {
+        &.codding {
+          margin-top: 13rem;
+          > ul > li > div > span {
+            span.cd :after {
+              content: "";
+              display: block;
               width: 80%;
             }
-          }
 
-          &.s {
-            &:after {
-              width: 75%;
+            &.s {
+              &:after {
+                width: 75%;
+              }
             }
-          }
-          &.j {
-            &:after {
-              width: 70%;
+            &.j {
+              &:after {
+                width: 70%;
+              }
             }
           }
         }
@@ -645,14 +731,29 @@ section.portfolio {
 
   background-image: url(./../images/port_back.png);
   > .container {
+    > h5 {
+      @media #{$mobile} {
+        text-align: center;
+      }
+    }
     > div {
       display: flex;
       justify-content: space-between;
 
+      @media #{$mobile} {
+        flex-direction: column;
+      }
       > .btn {
         width: 30%;
+        @media #{$mobile} {
+          order: 2;
+          width: 100%;
+
+          display: flex;
+          justify-content: space-evenly;
+        }
         > p {
-          width: 100px;
+          width: 120px;
           height: 25px;
 
           font-size: 1.2rem;
@@ -661,6 +762,10 @@ section.portfolio {
           font-weight: 600;
 
           &:nth-of-type(2) {
+            margin-top: 20px;
+          }
+
+          @media #{$mobile} {
             margin-top: 20px;
           }
           > a {
@@ -686,12 +791,21 @@ section.portfolio {
       > .content {
         width: 70%;
 
+        @media #{$mobile} {
+          order: 1;
+        }
+
         > ol {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
 
           width: 100%;
+          @media #{$mobile} {
+            flex-wrap: nowrap;
+            width: 100vw;
+            margin: 0 auto;
+          }
 
           > li {
             > a {
@@ -788,11 +902,32 @@ section.portfolio {
                 background-position: center center;
               }
             }
+            &:nth-of-type(5) {
+              > a {
+                background-image: url(./../images/행정심판.jpg);
+                background-size: 175%;
+                background-position: center center;
+              }
+            }
             &:nth-of-type(6) {
               > a {
                 background-image: url(./../images/글로벌매거진.jpg);
                 background-size: 210%;
                 background-position: center -90px;
+              }
+            }
+            &:nth-of-type(7) {
+              > a {
+                background-image: url(./../images/트래블.jpg);
+                background-size: 125%;
+                background-position: center center;
+              }
+            }
+            &:nth-of-type(8) {
+              > a {
+                background-image: url(./../images/웹이벤트.jpg);
+                background-size: cover;
+                background-position: center center;
               }
             }
           }
@@ -807,10 +942,18 @@ section#contact {
     display: flex;
     justify-content: space-between;
 
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+
     > h5 {
       color: #ffd900;
       &::after {
         border-bottom: 3px solid #ffd900;
+      }
+
+      @media #{$mobile} {
+        text-align: center;
       }
     }
 
@@ -818,9 +961,20 @@ section#contact {
       display: flex;
       justify-content: space-between;
       width: 70%;
+
+      @media #{$mobile} {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
       > .content {
         width: 50%;
         color: #fff;
+        @media #{$mobile} {
+          width: 100%;
+          order: 2;
+        }
 
         > h2 {
           font-size: 2.8rem;
@@ -833,11 +987,12 @@ section#contact {
         }
 
         > .ct_btn {
-          // display: flex;
-          // justify-content: start;
-          // flex-wrap: wrap;
-
           margin-top: 40px;
+
+          @media #{$mobile} {
+            width: 70%;
+            margin: 20px auto 0;
+          }
           > p {
             display: flex;
             justify-content: start;
@@ -883,6 +1038,7 @@ section#contact {
           }
         }
       }
+
       > .visual {
         width: 45%;
         height: 250px;
@@ -890,6 +1046,13 @@ section#contact {
         background-size: 80%;
         background-position: center -2rem;
         background-repeat: no-repeat;
+
+        @media #{$mobile} {
+          width: 60%;
+          height: 200px;
+          margin: 0 auto;
+          order: 1;
+        }
       }
     }
   }

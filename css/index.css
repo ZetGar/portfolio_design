@@ -370,6 +370,12 @@ section > .container {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  section > .container {
+    width: 100vw;
+  }
+}
+
 section > .container h5 {
   color: #927e6a;
   font-size: 1.2rem;
@@ -382,6 +388,12 @@ section > .container h5::after {
   width: 10px;
   margin-top: 10px;
   border-bottom: 3px solid #927e6a;
+}
+
+@media screen and (max-width: 768px) {
+  section > .container h5::after {
+    margin: 10px auto 0;
+  }
 }
 
 section > .container p {
@@ -399,11 +411,27 @@ section.main {
   background-size: cover;
 }
 
+@media screen and (max-width: 768px) {
+  section.main {
+    height: 600px;
+    padding: 0;
+    background-size: 750%;
+    background-position: -40rem center;
+  }
+}
+
 section.main > .container h2 {
-  width: 1000px;
   padding: 25rem 0 5rem;
   font-size: 6rem;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section.main > .container h2 {
+    padding: 18rem 0 5rem;
+    font-size: 4rem;
+    font-weight: 800;
+  }
 }
 
 section.main > .container > .gnb {
@@ -411,6 +439,19 @@ section.main > .container > .gnb {
   justify-content: space-between;
   width: 450px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  section.main > .container > .gnb {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.main > .container > .gnb > li {
+    margin-bottom: 15px;
+  }
 }
 
 section.main > .container > .gnb > li > a {
@@ -435,6 +476,12 @@ section.main > .container > .gnb > li > a:hover {
   border: none;
 }
 
+@media screen and (max-width: 768px) {
+  section.main > .container > .gnb > li > a {
+    margin: 0 auto;
+  }
+}
+
 section.main > .container > .gnb > li:nth-of-type(3) > a:hover {
   background-color: #c35454;
 }
@@ -449,12 +496,34 @@ section.aboutme > .container {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  section.aboutme > .container {
+    flex-direction: column;
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
 section.aboutme > .container > .interveiw {
   width: 30%;
 }
 
 section.aboutme > .container > .skill {
   width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div {
+    width: 100%;
+  }
 }
 
 section.aboutme > .container > .skill > div > h3 {
@@ -465,14 +534,41 @@ section.aboutme > .container > .skill > div > h3 {
   font-weight: 800;
 }
 
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div > h3 {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #635749;
+  }
+}
+
 section.aboutme > .container > .skill > div ul {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
 }
 
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div ul {
+    flex-direction: column;
+  }
+}
+
 section.aboutme > .container > .skill > div ul li {
   width: calc(100% / 3 - 30px);
+}
+
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div ul li {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div ul li > div {
+    margin-top: 20px;
+  }
 }
 
 section.aboutme > .container > .skill > div ul li > div > p {
@@ -496,10 +592,11 @@ section.aboutme > .container > .skill > div ul li > div > span:after {
   content: "";
   position: absolute;
   left: -100%;
+  width: 95%;
   height: 10px;
   background-color: #496b60;
   border-radius: 3rem;
-  animation: bar 2s ease-in-out 0.5s forwards;
+  animation: bar 2s ease-in-out 0.25s forwards;
 }
 
 @keyframes bar {
@@ -511,26 +608,28 @@ section.aboutme > .container > .skill > div ul li > div > span:after {
   }
 }
 
-section.aboutme > .container > .skill > .design > ul > li > div > span.de:after {
-  width: 95%;
-}
-
-section.aboutme > .container > .skill > .design > ul > li > div > span.p:after {
+section.aboutme > .container > .skill > div.design > ul > li > div > span .p:after {
   width: 90%;
 }
 
-section.aboutme > .container > .skill > .design > div {
+section.aboutme > .container > .skill > div.design > div {
   margin-top: 40px;
   border-top: 1px dotted #927e6a;
 }
 
-section.aboutme > .container > .skill > .design > div > div {
+section.aboutme > .container > .skill > div.design > div > div {
   display: flex;
   justify-content: space-between;
   margin: 20px 0 20px;
 }
 
-section.aboutme > .container > .skill > .design > div > div > h6 {
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div.design > div > div {
+    flex-direction: column;
+  }
+}
+
+section.aboutme > .container > .skill > div.design > div > div > h6 {
   width: 15%;
   height: 25px;
   color: #fff;
@@ -540,14 +639,28 @@ section.aboutme > .container > .skill > .design > div > div > h6 {
   border-radius: 5rem;
 }
 
-section.aboutme > .container > .skill > .design > div > div > ol {
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div.design > div > div > h6 {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+section.aboutme > .container > .skill > div.design > div > div > ol {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
   width: 80%;
 }
 
-section.aboutme > .container > .skill > .design > div > div > ol li {
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div.design > div > div > ol {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+section.aboutme > .container > .skill > div.design > div > div > ol li {
   width: 100px;
   height: 25px;
   margin: 0 10px 15px 0;
@@ -560,23 +673,27 @@ section.aboutme > .container > .skill > .design > div > div > ol li {
   box-sizing: border-box;
 }
 
-section.aboutme > .container > .skill > .codding {
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .skill > div.design > div > div > ol li {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+section.aboutme > .container > .skill > div.codding {
   margin-top: 13rem;
 }
 
-section.aboutme > .container > .skill > .codding > ul > li > div > span.cd {
-  width: 100%;
-}
-
-section.aboutme > .container > .skill > .codding > ul > li > div > span.cd:after {
+section.aboutme > .container > .skill > div.codding > ul > li > div > span span.cd :after {
+  content: "";
+  display: block;
   width: 80%;
 }
 
-section.aboutme > .container > .skill > .codding > ul > li > div > span.s:after {
+section.aboutme > .container > .skill > div.codding > ul > li > div > span.s:after {
   width: 75%;
 }
 
-section.aboutme > .container > .skill > .codding > ul > li > div > span.j:after {
+section.aboutme > .container > .skill > div.codding > ul > li > div > span.j:after {
   width: 70%;
 }
 
@@ -585,17 +702,38 @@ section.portfolio {
   background-image: url(./../images/port_back.png);
 }
 
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > h5 {
+    text-align: center;
+  }
+}
+
 section.portfolio > .container > div {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div {
+    flex-direction: column;
+  }
 }
 
 section.portfolio > .container > div > .btn {
   width: 30%;
 }
 
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div > .btn {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
 section.portfolio > .container > div > .btn > p {
-  width: 100px;
+  width: 120px;
   height: 25px;
   font-size: 1.2rem;
   text-align: center;
@@ -605,6 +743,12 @@ section.portfolio > .container > div > .btn > p {
 
 section.portfolio > .container > div > .btn > p:nth-of-type(2) {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div > .btn > p {
+    margin-top: 20px;
+  }
 }
 
 section.portfolio > .container > div > .btn > p > a {
@@ -626,11 +770,25 @@ section.portfolio > .container > div > .content {
   width: 70%;
 }
 
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div > .content {
+    order: 1;
+  }
+}
+
 section.portfolio > .container > div > .content > ol {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div > .content > ol {
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin: 0 auto;
+  }
 }
 
 section.portfolio > .container > div > .content > ol > li > a {
@@ -714,10 +872,28 @@ section.portfolio > .container > div > .content > ol > li:nth-of-type(4) > a {
   background-position: center center;
 }
 
+section.portfolio > .container > div > .content > ol > li:nth-of-type(5) > a {
+  background-image: url(./../images/행정심판.jpg);
+  background-size: 175%;
+  background-position: center center;
+}
+
 section.portfolio > .container > div > .content > ol > li:nth-of-type(6) > a {
   background-image: url(./../images/글로벌매거진.jpg);
   background-size: 210%;
   background-position: center -90px;
+}
+
+section.portfolio > .container > div > .content > ol > li:nth-of-type(7) > a {
+  background-image: url(./../images/트래블.jpg);
+  background-size: 125%;
+  background-position: center center;
+}
+
+section.portfolio > .container > div > .content > ol > li:nth-of-type(8) > a {
+  background-image: url(./../images/웹이벤트.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 section#contact {
@@ -729,6 +905,12 @@ section#contact .container {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  section#contact .container {
+    flex-direction: column;
+  }
+}
+
 section#contact .container > h5 {
   color: #ffd900;
 }
@@ -737,15 +919,36 @@ section#contact .container > h5::after {
   border-bottom: 3px solid #ffd900;
 }
 
+@media screen and (max-width: 768px) {
+  section#contact .container > h5 {
+    text-align: center;
+  }
+}
+
 section#contact .container > div {
   display: flex;
   justify-content: space-between;
   width: 70%;
 }
 
+@media screen and (max-width: 768px) {
+  section#contact .container > div {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 section#contact .container > div > .content {
   width: 50%;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  section#contact .container > div > .content {
+    width: 100%;
+    order: 2;
+  }
 }
 
 section#contact .container > div > .content > h2 {
@@ -761,6 +964,13 @@ section#contact .container > div > .content > p {
 
 section#contact .container > div > .content > .ct_btn {
   margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  section#contact .container > div > .content > .ct_btn {
+    width: 70%;
+    margin: 20px auto 0;
+  }
 }
 
 section#contact .container > div > .content > .ct_btn > p {
@@ -806,4 +1016,13 @@ section#contact .container > div > .visual {
   background-size: 80%;
   background-position: center -2rem;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  section#contact .container > div > .visual {
+    width: 60%;
+    height: 200px;
+    margin: 0 auto;
+    order: 1;
+  }
 }
