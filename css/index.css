@@ -413,7 +413,7 @@ section.main {
 
 @media screen and (max-width: 768px) {
   section.main {
-    height: 600px;
+    height: 100vh;
     padding: 0;
     background-size: 750%;
     background-position: -40rem center;
