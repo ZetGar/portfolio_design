@@ -1,15 +1,11 @@
 $(function () {
-  // 상단메뉴 고정
-  $(window).scroll(function () {
+  $(window).on("scroll", function () {
     $("header").toggleClass("sticky", window.scrollY > 0);
   });
 
-  $("a.logo").on("click", function (evt) {
-    evt.preventDefault();
-
-    $("html").stop().animate({
-      scrollTop: 0,
-    });
+  $("a.logo").click(function () {
+    $("html, body").stop().animate({ scrollTop: 0 }, 400);
+    return false;
   });
 });
 

@@ -5,7 +5,6 @@ $mobile: "screen and (max-width:768px)";
   display: grid;
   grid-template: repeat(3, auto) / 1fr;
   width: 100vw;
-  height: 100vh;
   background-color: #eedeca;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -26,13 +25,20 @@ header {
   height: 50px;
   transition: all 0.5s;
 
-  // background-color: rgb(238, 222, 202);
-
-  // border-bottom: 1px solid #000;
-
   &.sticky {
     > .hd_bg {
       opacity: 1;
+      height: 50px;
+    }
+    > .hd_content {
+      top: 0;
+      left: calc(50% - 60px);
+
+      > h1 {
+        > a.logo {
+          width: 80px;
+        }
+      }
     }
   }
 
@@ -43,23 +49,19 @@ header {
     width: 100vw;
     height: 70px;
 
-    background-color: #eedeca;
-    border-bottom: 1px solid #927e6a;
+    background-color: #e0d0bd;
+    box-shadow: #927e6a 0 0 5px;
+    // border-bottom: 1px solid #927e6a;
   }
 
   > .hd_content {
-    // display: flex;
-    // justify-content: space-between;
-
-    // max-width: 1000px;
-    // height: 50px;
-    // margin: 0 auto;
     position: absolute;
     top: 20px;
     left: calc(50% - 50px);
 
     @media #{$mobile} {
       margin: 0 20px;
+      left: calc(50% - 60px);
     }
 
     > h1 {
@@ -76,6 +78,8 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+
+        transition: all 0.5s;
       }
     } // end of h1.logo
 
@@ -153,213 +157,7 @@ header {
       }
     } // end of total
   } // end of hd_content
-
-  > nav {
-    display: none;
-    position: relative;
-    top: 0px;
-    margin: 0 auto;
-
-    > div {
-      position: relative;
-      top: 0;
-      width: 100vw;
-      height: 40px;
-      background-color: #000;
-
-      @media #{$mobile} {
-        height: 180px;
-      }
-    }
-    > .gnb {
-      position: absolute;
-      top: 0;
-      right: calc(50% - 640px);
-
-      display: flex;
-      justify-content: right;
-
-      max-width: 1280px;
-      height: 40px;
-
-      @media #{$mobile} {
-        flex-direction: column;
-        left: 0;
-      }
-
-      li {
-        > a {
-          display: block;
-          width: 100px;
-
-          color: #fff;
-          font-size: 1.3rem;
-          text-align: right;
-          font-weight: 600;
-          line-height: 40px;
-
-          transition: all 0.5s;
-
-          &:hover {
-            color: #e61f77;
-          }
-
-          @media #{$mobile} {
-            width: 100vw;
-            text-align: center;
-            line-height: 60px;
-          }
-        }
-      }
-    }
-  }
 } // end of header
-
-article#contact {
-  display: none;
-  position: absolute;
-  z-index: 600;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  > .back {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    z-index: 600;
-
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  > .ct_wrap {
-    position: absolute;
-    top: calc(50% - 25rem);
-    left: calc(50% - 15rem);
-
-    width: 30rem;
-    height: 48rem;
-    padding: 40px;
-
-    color: #fff;
-    text-align: center;
-
-    background-color: #1a488d;
-    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 8px;
-
-    box-sizing: border-box;
-    > h5 {
-      margin-bottom: 5rem;
-      color: #71c7d5;
-      font-size: 0.5rem;
-      font-weight: 600;
-      // text-decoration: underline 2px;
-
-      &:after {
-        content: "";
-        display: block;
-        width: 80px;
-        margin: 3px auto 0;
-        border-bottom: 2px solid #71c7d5;
-      }
-      > span {
-        letter-spacing: 5px;
-      }
-    }
-    > .ct_name {
-      margin-bottom: 3rem;
-
-      > p {
-        color: #71c7d5;
-        font-size: 0.8rem;
-        font-weight: 600;
-        line-height: 20px;
-        letter-spacing: 0.1rem;
-
-        &::before {
-          content: "";
-          display: block;
-          width: 90px;
-          height: 80px;
-          margin: 0 auto 10px;
-          background-image: url(./../images/contact_character_b.svg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center center;
-        }
-      }
-      > h3 {
-        margin-bottom: 1.5rem;
-        font-size: 2.3rem;
-        font-weight: 700;
-        line-height: 2.3rem;
-      }
-    }
-
-    > .ct_content {
-      box-sizing: border-box;
-      position: relative;
-      z-index: 99999;
-
-      > p {
-        margin-bottom: 1rem;
-
-        > a {
-          display: block;
-
-          color: #fff;
-          font-size: 1.1rem;
-          font-weight: 300;
-          line-height: 1.2rem;
-
-          transition: all 0.3s ease-in-out;
-        }
-
-        &:nth-of-type(3) {
-          margin-top: 2.5rem;
-          > a {
-            display: block;
-            width: 150px;
-            height: 30px;
-            margin: 0 auto;
-
-            color: #e61f77;
-            font-size: 1rem;
-            font-weight: 800;
-            line-height: 30px;
-
-            border: 1px solid #e61f77;
-            border-radius: 50px;
-
-            &:hover {
-              color: #fff;
-              text-decoration: none;
-
-              background-color: #e61f77;
-              border: 1px solid #e61f77;
-            }
-          }
-        }
-      }
-    }
-
-    > a {
-      display: block;
-      width: 22rem;
-      height: 30px;
-      margin: 5rem auto 0;
-
-      color: #71c7d5;
-      font-size: 1rem;
-      line-height: 30px;
-
-      transition: all 0.3s;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-} // end of #contact
 
 footer {
   width: 100vw;
@@ -471,7 +269,8 @@ section.main {
     height: 100vh;
     padding: 0;
     background-size: 750%;
-    background-position: -40rem center;
+    background-image: url(./../images/main_back_mo.png);
+    background-size: 100%;
   }
 
   > .container {
@@ -595,14 +394,15 @@ section.aboutme {
 
           @media #{$mobile} {
             flex-direction: column;
+            margin: 0 20px;
           }
 
           li {
             width: calc(100% / 3 - 30px);
 
             @media #{$mobile} {
-              margin: 0 auto;
-              width: 85%;
+              margin: 1.5rem auto;
+              width: 100%;
             }
 
             > div {
@@ -660,16 +460,30 @@ section.aboutme {
             }
           }
 
-          > div {
-            margin-top: 40px;
+          > div.can {
+            margin: 40px 0 20px;
             border-top: 1px dotted #927e6a;
+            width: 100%;
+
+            @media #{$mobile} {
+              margin: 40px 15px 0;
+              width: 90%;
+            }
+
             > div {
               display: flex;
               justify-content: space-between;
-              margin: 20px 0 20px;
+              margin-top: 20px;
 
               @media #{$mobile} {
                 flex-direction: column;
+                margin-top: 0;
+                &:nth-of-type(1) {
+                  margin-top: 30px;
+                }
+                &:nth-of-type(2) {
+                  margin-top: 30px;
+                }
               }
               > h6 {
                 width: 15%;
@@ -696,6 +510,7 @@ section.aboutme {
                 @media #{$mobile} {
                   width: 100%;
                   margin-top: 20px;
+                  justify-content: space-evenly;
                 }
 
                 li {
@@ -714,7 +529,8 @@ section.aboutme {
                   box-sizing: border-box;
 
                   @media #{$mobile} {
-                    width: calc(100% / 3 - 10px);
+                    width: calc(100% / 3 - 20px);
+                    margin-right: 0;
                   }
                 }
               }
@@ -766,13 +582,13 @@ section.portfolio {
         flex-direction: column;
       }
       > .btn {
-        width: 30%;
+        width: 20%;
         @media #{$mobile} {
           order: 2;
           width: 100%;
 
           display: flex;
-          justify-content: space-evenly;
+          justify-content: center;
         }
         > p {
           width: 120px;
@@ -789,6 +605,9 @@ section.portfolio {
 
           @media #{$mobile} {
             margin-top: 20px;
+            &:nth-of-type(1) {
+              margin-right: 20px;
+            }
           }
           > a {
             display: block;
