@@ -74,68 +74,6 @@ header > .hd_content > h1 > a.logo {
   transition: all 0.5s;
 }
 
-header > .hd_content .total {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  margin-top: 3px;
-}
-
-header > .hd_content .total span {
-  display: block;
-  position: absolute;
-  top: calc(50% - 1.5px);
-  left: 0;
-  z-index: 9999;
-  width: 25px;
-  height: 3px;
-  text-indent: -9999px;
-  background-color: #222;
-  border-radius: 5rem;
-  transition: all 0.3s;
-}
-
-header > .hd_content .total span:before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 0;
-  width: 25px;
-  height: 3px;
-  background-color: #222;
-  border-radius: 5rem;
-  transition: all 0.3s;
-}
-
-header > .hd_content .total span:after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 25px;
-  height: 3px;
-  background-color: #222;
-  border-radius: 5rem;
-  transition: all 0.3s;
-}
-
-header > .hd_content .total.active span {
-  background-color: rgba(150, 150, 150, 0);
-}
-
-header > .hd_content .total.active span:before, header > .hd_content .total.active span:after {
-  top: 0;
-  background-color: #222;
-}
-
-header > .hd_content .total.active span:before {
-  transform: rotate(45deg);
-}
-
-header > .hd_content .total.active span:after {
-  transform: rotate(-45deg);
-}
-
 footer {
   width: 100vw;
   height: 50px;
@@ -201,4 +139,131 @@ footer .ft_wrap > p > a:hover {
 .execution {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+#wrap {
+  background-color: #fff;
+}
+
+header {
+  position: fixed;
+  height: 70px;
+  background-color: #fff;
+}
+
+header > .hd_content {
+  position: absolute;
+  left: calc(50% - 500px);
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+header > .hd_content > nav > ol {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+header > .hd_content > nav > ol > li > a {
+  display: block;
+  width: 100px;
+  margin-top: 23px;
+  color: #5c5c5c;
+  font-weight: 600;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid #5c5c5c;
+  border-radius: 5rem;
+  transition: ease-in-out 0.5s;
+}
+
+header > .hd_content > nav > ol > li > a:hover {
+  color: #fff;
+  background-color: #5c5c5c;
+}
+
+footer {
+  height: 100px;
+  margin: 0;
+  background-color: #fff;
+}
+
+footer > .ft_wrap > address {
+  padding: 0;
+  color: #5c5c5c;
+  line-height: 100px;
+}
+
+section.a {
+  margin-top: 70px;
+}
+
+section.a > .container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+section.a > .container > .a_head > h3 {
+  margin: 5rem 0 3rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section.a > .container > .a_head > p {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.a > .container > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+  margin: 5rem auto 3rem;
+}
+
+section.a > .container > ul > li > a {
+  display: block;
+  width: 90px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid #5c5c5c;
+  transition: ease-in-out 0.5s;
+}
+
+section.a > .container > ul > li > a:hover {
+  color: #fff;
+  font-weight: 600;
+  background-color: #5c5c5c;
+}
+
+section.b {
+  width: 1000px;
+  margin: 2rem auto;
+}
+
+section.b > ol {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+section.b > ol > li > a {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 10px 10px;
+  background-color: #000;
+}
+
+section.b > ol > li:nth-of-type(24) > a {
+  display: block;
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 140px;
+  text-align: center;
+  background-color: #5c5c5c;
 }
