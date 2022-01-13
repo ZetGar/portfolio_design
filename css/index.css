@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 #wrap {
   display: grid;
   grid-template: repeat(3, auto)/1fr;
@@ -6,7 +10,6 @@
   background-color: #eedeca;
   overflow-x: hidden;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -186,6 +189,21 @@ footer .ft_wrap > p > a:hover {
   border: 1px solid #e61f77;
 }
 
+.top, section.main > .container h2, section.aboutme > .container > .skill > div.design > div.can, section.portfolio > .container > div > .btn > p, section.portfolio > .container > div > .content > ol > li, section#contact .container > div > .content > p, section#contact .container > div > .content > h2, section#contact .container > div > .visual {
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+
+.left, section > .container h5, section.main > .container > .gnb > li, section.aboutme > .container > .interview > h5, section.aboutme > .container > .interview > div, section.aboutme > .container > .skill, section.aboutme > .container > .skill > h5, section.aboutme > .container > .skill > div > h3, section.aboutme > .container > .skill > div ul li, section#contact .container > div > .content > .ct_btn > p {
+  opacity: 0;
+  transform: translate(-20px, 0);
+}
+
+.execution, section.main.active .container > h2, section.main.active .container > .gnb > li, section.aboutme.active > .container > .interview > h5, section.aboutme.active > .container > .interview > div, section.aboutme.active > .container > .skill, section.aboutme.active > .container > .skill > h5, section.aboutme.active > .container > .skill > div.design > h3, section.aboutme.active > .container > .skill > div.design > ul > li, section.aboutme.active > .container > .skill > div.design > .can, section.aboutme.active > .container > .skill > div.codding > h3, section.aboutme.active > .container > .skill > div.codding > ul > li, section.portfolio.active > .container > h5, section.portfolio.active > .container > div > .btn > p, section.portfolio.active > .container > div > .content > ol > li:nth-of-type(1), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(2), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(3), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(4), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(5), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(6), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(7), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(8), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(9), section#contact.active > .container > h5, section#contact.active > .container > div > .content > p, section#contact.active > .container > div > .content > h2, section#contact.active > .container > div > .content > .ct_btn > p, section#contact.active > .container > div > .visual {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 section {
   padding: 5rem 0;
 }
@@ -205,6 +223,7 @@ section > .container h5 {
   color: #927e6a;
   font-size: 1.2rem;
   margin-bottom: 50px;
+  transition: ease-in-out 0.5s;
 }
 
 section > .container h5::after {
@@ -246,10 +265,23 @@ section.main {
   }
 }
 
+section.main.active .container > .gnb > li:nth-of-type(1) {
+  transition: ease-in-out 0.5s 0.5s;
+}
+
+section.main.active .container > .gnb > li:nth-of-type(2) {
+  transition: ease-in-out 0.5s 0.7s;
+}
+
+section.main.active .container > .gnb > li:nth-of-type(3) {
+  transition: ease-in-out 0.5s 1s;
+}
+
 section.main > .container h2 {
   padding: 25rem 0 5rem;
   font-size: 6rem;
   text-align: center;
+  transition: ease-in-out 0.5s 0.2s;
 }
 
 @media screen and (max-width: 768px) {
@@ -317,6 +349,80 @@ section.aboutme {
   background-color: #e0d0bd;
 }
 
+section.aboutme.active > .container > .interview {
+  opacity: 1;
+}
+
+section.aboutme.active > .container > .skill {
+  opacity: 1;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(1) {
+  transition: ease-in-out 0.5s 1s;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(1) span:after {
+  left: 0;
+  width: 90%;
+  transition: ease-in-out 1.5s 1s;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(2) {
+  transition: ease-in-out 0.5s 1.2s;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(2) span:after {
+  left: 0;
+  transition: ease-in-out 1.5s 1.2s;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(3) {
+  transition: ease-in-out 0.5s 1.4s;
+}
+
+section.aboutme.active > .container > .skill > div.design > ul > li:nth-of-type(3) span:after {
+  left: 0;
+  transition: ease-in-out 1.5s 1.4s;
+}
+
+section.aboutme.active > .container > .skill > div.design > .can {
+  transition: ease-in-out 0.5s 2.2s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > h3 {
+  transition: ease-in-out 0.5s 2.5s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(1) {
+  transition: ease-in-out 0.5s 2.5s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(1) span:after {
+  left: 0;
+  width: 85%;
+  transition: ease-in-out 1.5s 2.5s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(2) {
+  transition: ease-in-out 0.5s 2.7s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(2) span:after {
+  left: 0;
+  width: 85%;
+  transition: ease-in-out 1.5s 2.7s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(3) {
+  transition: ease-in-out 0.5s 2.9s;
+}
+
+section.aboutme.active > .container > .skill > div.codding > ul > li:nth-of-type(3) span:after {
+  left: 0;
+  width: 75%;
+  transition: ease-in-out 1.5s 2.9s;
+}
+
 section.aboutme > .container {
   display: flex;
   justify-content: space-between;
@@ -331,12 +437,25 @@ section.aboutme > .container {
   }
 }
 
-section.aboutme > .container > .interveiw {
+section.aboutme > .container > .interview {
   width: 30%;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  section.aboutme > .container > .interview {
+    width: 100%;
+  }
+}
+
+section.aboutme > .container > .interview > div {
+  transition: ease-in-out 0.5s 0.5s;
 }
 
 section.aboutme > .container > .skill {
   width: 70%;
+  transition: ease-in-out 0.5s 0.8s;
 }
 
 @media screen and (max-width: 768px) {
@@ -417,13 +536,14 @@ section.aboutme > .container > .skill > div ul li > div > span {
 
 section.aboutme > .container > .skill > div ul li > div > span:after {
   content: "";
+  display: block;
   position: absolute;
+  top: 0;
   left: -100%;
   width: 95%;
   height: 10px;
   background-color: #496b60;
   border-radius: 3rem;
-  animation: bar 2s ease-in-out 0.25s forwards;
 }
 
 @keyframes bar {
@@ -546,6 +666,50 @@ section.portfolio {
   background-image: url(./../images/port_back.png);
 }
 
+section.portfolio.active > .container > div > .btn > p:nth-of-type(1) {
+  transition: ease-in-out 0.5s 1s;
+}
+
+section.portfolio.active > .container > div > .btn > p:nth-of-type(2) {
+  transition: ease-in-out 0.5s 1.2s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(1) {
+  transition: ease-in-out 0.5s 1s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(2) {
+  transition: ease-in-out 0.5s 1.2s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(3) {
+  transition: ease-in-out 0.5s 1.4s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(4) {
+  transition: ease-in-out 0.5s 1.6s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(5) {
+  transition: ease-in-out 0.5s 1.8s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(6) {
+  transition: ease-in-out 0.5s 2s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(7) {
+  transition: ease-in-out 0.5s 2.2s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(8) {
+  transition: ease-in-out 0.5s 2.4s;
+}
+
+section.portfolio.active > .container > div > .content > ol > li:nth-of-type(9) {
+  transition: ease-in-out 0.5s 2.6s;
+}
+
 @media screen and (max-width: 768px) {
   section.portfolio > .container > h5 {
     text-align: center;
@@ -648,20 +812,19 @@ section.portfolio > .container > div > .content > ol > li > a {
   overflow: hidden;
 }
 
-section.portfolio > .container > div > .content > ol > li > a::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 220px;
+section.portfolio > .container > div > .content > ol > li > a > div {
+  position: relative;
+  transform: translate(0, -100%);
   width: 220px;
   height: 220px;
-  background-color: rgba(99, 87, 73, 0.753);
+  background-color: rgba(61, 61, 61, 0.753);
   transition: all 0.7s;
 }
 
-section.portfolio > .container > div > .content > ol > li > a > div {
+section.portfolio > .container > div > .content > ol > li > a > div:after {
+  content: "";
+  display: block;
   position: absolute;
-  top: 220px;
   top: 10px;
   left: 10px;
   width: 200px;
@@ -677,17 +840,23 @@ section.portfolio > .container > div > .content > ol > li > a > div {
 
 section.portfolio > .container > div > .content > ol > li > a > div > h4 {
   opacity: 0;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  transition: all 0.5s 0.5s;
+  line-height: 220px;
+  transition: all 0.5s 0.6s;
 }
 
 section.portfolio > .container > div > .content > ol > li > a:hover::before {
-  top: 0;
+  transform: translate(0, 0);
 }
 
 section.portfolio > .container > div > .content > ol > li > a:hover > div {
+  transform: translate(0, 0);
+}
+
+section.portfolio > .container > div > .content > ol > li > a:hover > div:after {
   opacity: 1;
 }
 
@@ -747,6 +916,30 @@ section#contact {
   background-color: #758c72;
 }
 
+section#contact.active > .container > div > .content > p {
+  transition: ease-in-out 0.5s 0.7s;
+}
+
+section#contact.active > .container > div > .content > h2 {
+  transition: ease-in-out 0.5s 1s;
+}
+
+section#contact.active > .container > div > .content > .ct_btn > p:nth-of-type(1) {
+  transition: ease-in-out 0.5s 1.5s;
+}
+
+section#contact.active > .container > div > .content > .ct_btn > p:nth-of-type(2) {
+  transition: ease-in-out 0.5s 1.7s;
+}
+
+section#contact.active > .container > div > .content > .ct_btn > p:nth-of-type(3) {
+  transition: ease-in-out 0.5s 1.9s;
+}
+
+section#contact.active > .container > div > .visual {
+  transition: ease-in-out 0.5s 0.3s;
+}
+
 section#contact .container {
   display: flex;
   justify-content: space-between;
@@ -798,15 +991,15 @@ section#contact .container > div > .content {
   }
 }
 
-section#contact .container > div > .content > h2 {
-  font-size: 2.8rem;
-}
-
 section#contact .container > div > .content > p {
   margin-bottom: 0;
   color: #fff;
   font-size: 1rem;
   line-height: 2.5rem;
+}
+
+section#contact .container > div > .content > h2 {
+  font-size: 2.8rem;
 }
 
 section#contact .container > div > .content > .ct_btn {
