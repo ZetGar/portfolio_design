@@ -29,6 +29,10 @@ $(function () {
     } else if ($(this).scrollTop() <= $contact) {
       $(".portfolio").addClass("active");
     } else if ($(this).scrollTop() <= $contact + 300) {
+      $(".aboutme").addClass("active");
+
+      $(".portfolio").addClass("active");
+
       $("#contact").addClass("active");
     }
   });

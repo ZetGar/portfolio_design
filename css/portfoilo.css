@@ -187,3 +187,18 @@ footer .ft_wrap > p > a:hover {
   background-color: #e61f77;
   border: 1px solid #e61f77;
 }
+
+.top {
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+
+.left {
+  opacity: 0;
+  transform: translate(-20px, 0);
+}
+
+.execution {
+  opacity: 1;
+  transform: translate(0, 0);
+}
