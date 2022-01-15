@@ -127,7 +127,7 @@ footer .ft_wrap > p > a:hover {
   border: 1px solid #e61f77;
 }
 
-.top, section.main > .container h2, section.aboutme > .container > .skill > div.design > div.can, section.portfolio > .container > div > .btn > p, section.portfolio > .container > div > .content > ol > li, section#contact .container > div > .content > p, section#contact .container > div > .content > h2, section#contact .container > div > .visual {
+.top, section.main > .container h2, section.aboutme > .container > .skill > div.design > div.can, section.portfolio > .container > div > .btn > p, section.portfolio > .container > div > .content > ol.slideContainer > li, section#contact .container > div > .content > p, section#contact .container > div > .content > h2, section#contact .container > div > .visual {
   opacity: 0;
   transform: translate(0, -20px);
 }
@@ -137,7 +137,7 @@ footer .ft_wrap > p > a:hover {
   transform: translate(-20px, 0);
 }
 
-.execution, section.main.active .container > h2, section.main.active .container > .gnb > li, section.aboutme.active > .container > .interview > h5, section.aboutme.active > .container > .interview > div, section.aboutme.active > .container > .skill, section.aboutme.active > .container > .skill > h5, section.aboutme.active > .container > .skill > div.design > h3, section.aboutme.active > .container > .skill > div.design > ul > li, section.aboutme.active > .container > .skill > div.design > .can, section.aboutme.active > .container > .skill > div.codding > h3, section.aboutme.active > .container > .skill > div.codding > ul > li, section.portfolio.active > .container > h5, section.portfolio.active > .container > div > .btn > p, section.portfolio.active > .container > div > .content > ol > li:nth-of-type(1), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(2), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(3), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(4), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(5), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(6), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(7), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(8), section.portfolio.active > .container > div > .content > ol > li:nth-of-type(9), section#contact.active > .container > h5, section#contact.active > .container > div > .content > p, section#contact.active > .container > div > .content > h2, section#contact.active > .container > div > .content > .ct_btn > p, section#contact.active > .container > div > .visual {
+.execution, section.main.active .container > h2, section.main.active .container > .gnb > li, section.aboutme.active > .container > .interview > h5, section.aboutme.active > .container > .interview > div, section.aboutme.active > .container > .skill, section.aboutme.active > .container > .skill > h5, section.aboutme.active > .container > .skill > div.design > h3, section.aboutme.active > .container > .skill > div.design > ul > li, section.aboutme.active > .container > .skill > div.design > .can, section.aboutme.active > .container > .skill > div.codding > h3, section.aboutme.active > .container > .skill > div.codding > ul > li, section.portfolio.active > .container > h5, section.portfolio.active > .container > div > .btn > p, section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(1), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(2), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(3), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(4), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(5), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(6), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(7), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(8), section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(9), section#contact.active > .container > h5, section#contact.active > .container > div > .content > p, section#contact.active > .container > div > .content > h2, section#contact.active > .container > div > .content > .ct_btn > p, section#contact.active > .container > div > .visual {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -612,39 +612,39 @@ section.portfolio.active > .container > div > .btn > p:nth-of-type(2) {
   transition: ease-in-out 0.5s 1.2s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(1) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(1) {
   transition: ease-in-out 0.5s 1s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(2) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(2) {
   transition: ease-in-out 0.5s 1.2s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(3) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(3) {
   transition: ease-in-out 0.5s 1.4s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(4) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(4) {
   transition: ease-in-out 0.5s 1.6s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(5) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(5) {
   transition: ease-in-out 0.5s 1.8s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(6) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(6) {
   transition: ease-in-out 0.5s 2s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(7) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(7) {
   transition: ease-in-out 0.5s 2.2s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(8) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(8) {
   transition: ease-in-out 0.5s 2.4s;
 }
 
-section.portfolio.active > .container > div > .content > ol > li:nth-of-type(9) {
+section.portfolio.active > .container > div > .content > ol.slideContainer > li:nth-of-type(9) {
   transition: ease-in-out 0.5s 2.6s;
 }
 
@@ -725,22 +725,24 @@ section.portfolio > .container > div > .content {
   }
 }
 
-section.portfolio > .container > div > .content > ol {
+section.portfolio > .container > div > .content > ol.slideContainer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  section.portfolio > .container > div > .content > ol {
+  section.portfolio > .container > div > .content > ol.slideContainer {
     flex-wrap: nowrap;
-    width: 100vw;
+    width: calc(100vw * 9);
     margin: 0 auto;
+  }
+  section.portfolio > .container > div > .content > ol.slideContainer .transforming {
+    transition: ease-in-out 0.5s;
   }
 }
 
-section.portfolio > .container > div > .content > ol > li > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a {
   display: block;
   position: relative;
   width: 220px;
@@ -750,7 +752,14 @@ section.portfolio > .container > div > .content > ol > li > a {
   overflow: hidden;
 }
 
-section.portfolio > .container > div > .content > ol > li > a > div {
+@media screen and (max-width: 768px) {
+  section.portfolio > .container > div > .content > ol.slideContainer > li > a {
+    width: 100vw;
+    height: 400px;
+  }
+}
+
+section.portfolio > .container > div > .content > ol.slideContainer > li > a > div {
   position: relative;
   transform: translate(0, -100%);
   width: 220px;
@@ -759,7 +768,7 @@ section.portfolio > .container > div > .content > ol > li > a > div {
   transition: all 0.7s;
 }
 
-section.portfolio > .container > div > .content > ol > li > a > div:after {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a > div:after {
   content: "";
   display: block;
   position: absolute;
@@ -776,7 +785,7 @@ section.portfolio > .container > div > .content > ol > li > a > div:after {
   transition: all 0.5s 0.6s;
 }
 
-section.portfolio > .container > div > .content > ol > li > a > div > h4 {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a > div > h4 {
   opacity: 0;
   color: #fff;
   font-size: 1.5rem;
@@ -786,65 +795,65 @@ section.portfolio > .container > div > .content > ol > li > a > div > h4 {
   transition: all 0.5s 0.6s;
 }
 
-section.portfolio > .container > div > .content > ol > li > a:hover::before {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a:hover::before {
   transform: translate(0, 0);
 }
 
-section.portfolio > .container > div > .content > ol > li > a:hover > div {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a:hover > div {
   transform: translate(0, 0);
 }
 
-section.portfolio > .container > div > .content > ol > li > a:hover > div:after {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a:hover > div:after {
   opacity: 1;
 }
 
-section.portfolio > .container > div > .content > ol > li > a:hover > div > h4 {
+section.portfolio > .container > div > .content > ol.slideContainer > li > a:hover > div > h4 {
   opacity: 1;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(1) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(1) > a {
   background-image: url(./../images/백일우_썸네일.jpg);
   background-size: 200%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(2) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(2) > a {
   background-image: url(./../images/주민기획_썸네일.jpg);
   background-size: 150%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(3) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(3) > a {
   background-image: url(./../images/펍지_썸네일.jpg);
   background-size: 140%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(4) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(4) > a {
   background-image: url(./../images/위드랜드_썸네일.jpg);
   background-size: 155%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(5) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(5) > a {
   background-image: url(./../images/행정심판_썸네일.jpg);
   background-size: 175%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(6) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(6) > a {
   background-image: url(./../images/글로벌매거진_썸네일.jpg);
   background-size: 210%;
   background-position: center -90px;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(7) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(7) > a {
   background-image: url(./../images/트래블_썸네일.jpg);
   background-size: 125%;
   background-position: center center;
 }
 
-section.portfolio > .container > div > .content > ol > li:nth-of-type(8) > a {
+section.portfolio > .container > div > .content > ol.slideContainer > li:nth-of-type(8) > a {
   background-image: url(./../images/웹이벤트_썸네일.jpg);
   background-size: cover;
   background-position: center center;

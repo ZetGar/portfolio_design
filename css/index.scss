@@ -545,7 +545,7 @@ section.portfolio {
         }
 
         > .content {
-          > ol {
+          > ol.slideContainer {
             > li {
               &:nth-of-type(1) {
                 @extend .execution;
@@ -660,17 +660,19 @@ section.portfolio {
           order: 1;
         }
 
-        > ol {
+        > ol.slideContainer {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
 
-          width: 100%;
-
           @media #{$mobile} {
             flex-wrap: nowrap;
-            width: 100vw;
+            width: calc(100vw * 9);
             margin: 0 auto;
+
+            .transforming {
+              transition: ease-in-out 0.5s;
+            }
           }
 
           > li {
@@ -686,6 +688,11 @@ section.portfolio {
               background-color: #fff;
 
               overflow: hidden;
+
+              @media #{$mobile} {
+                width: 100vw;
+                height: 400px;
+              }
 
               > div {
                 position: relative;
