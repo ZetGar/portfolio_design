@@ -380,6 +380,17 @@ $(function () {
   // 썸네일 정리
   let scrollPosition = 0;
   const body = document.querySelector("body");
+  // 팝업창 좌우스크롤
+  const scrollContainer = document.querySelector(".right");
+
+  function 좌우스크롤() {
+    scrollContainer.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+  }
+
   // 팝업오픈
   function enable() {
     scrollPosition = window.pageYOffset;
@@ -403,34 +414,6 @@ $(function () {
     });
   }
 
-  $(".scrollbar").on("mousewheel", function (e) {
-    var wheelDelta = e.originalEvent.wheelDelta;
-
-    if (wheelDelta > 0) {
-      console.log("up");
-
-      $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-    } else {
-      console.log("down");
-
-      $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-    }
-  });
-
-  // function wheel(좌우스크롤) {
-  //   scrollContainer.on("wheel", function (e) {
-  //     e.preventDefault();
-  //     var wheelDelta = e.wheelDelta;
-  //     if (wheelDelta > 0) {
-  //       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-  //     } else {
-  //       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-  //     }
-  //   });
-  // }
-
-  // $("html, body").css({ overflow: "auto", height: "auto" }).pageYOffset(1206);
-
   // 썸네일 클릭시 새 창 띄우기
   https: $thumpposter.click(function (e) {
     e.preventDefault();
@@ -439,11 +422,15 @@ $(function () {
     // 팝업창 보이기
     $("#popup").css({ display: "block", top: scrollPosition + "px" });
 
+    // 팝업창 내 스크롤 가능
     $("#popup").css({
       overflow: "auto",
       height: "auto",
     });
 
+    좌우스크롤();
+
+    // 팝업창 내 내용추가
     let thumhref = $(this).attr("href");
     // let popclass = $("#popup .left>.pop_content>div").attr("class");
 
@@ -455,128 +442,15 @@ $(function () {
           .hide();
       }
     }
-
-    const scrollContainer = document.querySelector(".right");
-
-    scrollContainer.addEventListener("wheel", (evt) => {
-      evt.preventDefault();
-      scrollContainer.scrollLeft += evt.deltaY;
-    });
   });
 
   // 팝업닫기
   $("a.close").click(function (e) {
     e.preventDefault();
+
     // 검은배경(pop_bg), close버튼 눌렀을때 popup 닫기
     $("#popup").css({ display: "none" }).removeClass(".modal-body");
+
     disable();
   });
-
-  // $("#scrollbar").on("mousewheel", function (e) {
-  //   var wheelDelta = e.originalEvent.wheelDelta;
-
-  //   if (wheelDelta > 0) {
-  //     console.log("up");
-
-  //     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-  //   } else {
-  //     console.log("down");
-
-  //     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-  //   }
-  // });
-
-  //   /*--------------------
-  // Wheel Option
-  // -------------------*/
-  //   let option = {
-  //     x: 0,
-  //     speed: 1.5,
-  //     limit: 2,
-  //     time: 0.3,
-  //   };
-
-  //   /*--------------------
-  // Init Scrollbar
-  // -------------------*/
-  //   const scrollbar = Scrollbar.init(document.querySelector("#scrollbar"), {
-  //     overscrollEffect: "bounce",
-  //     alwaysShowTracks: true,
-  //   });
-  //   const listener = (status) => {
-  //     console.log("scrollbar", status.offset.x);
-  //     active = parseInt(status.offset.x / 500);
-
-  //     bullets.forEach((b) => {
-  //       b.classList.remove("active");
-  //     });
-  //     bullets[active].classList.add("active");
-  //   };
-  //   scrollbar.addListener(listener);
-
-  //   /*--------------------
-  // Pagination
-  // -------------------*/
-  //   let active = 0;
-  //   let pag, bullets;
-
-  //   const pagination = () => {
-  //     const items = document.querySelectorAll(".item");
-  //     pag = document.createElement("div");
-  //     pag.classList.add("pagination");
-  //     items.forEach((item, i) => {
-  //       const bullet = document.createElement("button");
-  //       bullet.classList.add("bullet");
-  //       bullet.innerHTML = i;
-  //       pag.appendChild(bullet);
-  //     });
-  //     document.getElementById("scrollbar").appendChild(pag);
-  //     bullets = document.querySelectorAll(".bullet");
-
-  //     bullets.forEach((b, i) => {
-  //       b.addEventListener("click", (el) => {
-  //         bullets.forEach((el) => {
-  //           el.classList.remove("active");
-  //         });
-  //         el.target.classList.add("active");
-  //         const i = parseInt(el.target.innerHTML);
-  //         active = i;
-
-  //         let x = 500 * i;
-  //         if (x > scrollbar.limit.x) {
-  //           x = scrollbar.limit.x;
-  //         }
-
-  //         TweenMax.to(option, 1, {
-  //           x: x,
-  //           ease: Power4.easeOut,
-  //           onUpdate: () => {
-  //             window.console.log("option", option.x);
-  //             scrollbar.scrollTo(option.x, 0, 0);
-  //           },
-  //         });
-  //       });
-  //     });
-  //   };
-  //   pagination();
-
-  //   /*--------------------
-  // Mousewheel
-  // -------------------*/
-  //   const horizontalScroll = (e) => {
-  //     const y = parseInt(e.deltaY * option.speed);
-  //     let x = scrollbar.offset.x + y;
-  //     x = x < 0 ? 0 : x > scrollbar.limit.x ? scrollbar.limit.x : x;
-
-  //     TweenMax.to(option, option.time, {
-  //       x: x,
-  //       onUpdate: () => {
-  //         window.console.log("option", option.x);
-  //         scrollbar.scrollTo(option.x, 0, 0);
-  //       },
-  //     });
-  //   };
-  //   document.querySelector(".wrapper").addEventListener("mousewheel", (e) => {
-  //     horizontalScroll(e);
-  //   });
 });
