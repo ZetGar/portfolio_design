@@ -74,7 +74,7 @@ $(function () {
       title: "주민기획 아이디어 워크숍 포스터",
       text: "도봉구청, 문화도시준비위에서 주관한 문화도시 만들기 포스터",
       date: "2018 / 2019",
-      veiw: "",
+      veiw: "./images/thum/주민기획.jpg",
     },
     {
       id: 1,
@@ -111,7 +111,7 @@ $(function () {
       text: "행정심판 제도에 관한 설명 및 접수방법 안내 리플렛",
       contribute: "표지 쪽 3p 디자인",
       date: "2020",
-      veiw: "",
+      veiw: "./images/thum/행정심판.jpg",
     },
     {
       id: 5,
@@ -388,6 +388,9 @@ $(function () {
       evt.preventDefault();
 
       scrollContainer.scrollLeft += evt.deltaY;
+
+      var wheelDelta = evt.originalEvent.wheelDelta;
+      wheelDelta = 0;
     });
   }
 
