@@ -51,8 +51,8 @@ $(function () {
 
   // [웹] skill
 
-  $(window).scrollY;
-  console.log(scrollY);
+  // $(window).scrollY;
+  // console.log(scrollY);
 
   $(window).scroll(function (event) {
     var scroll = $(this).scrollTop();
@@ -78,6 +78,7 @@ $(function () {
     },
     {
       id: 1,
+      category: "poster",
       thum: "./images/thum/주거니받거니.jpg",
       title: "주거니 받거니 포스터",
       text: "도봉구청, 문화도시준비위원회에서 주관한 문화특화지역 조성사업 포스터",
@@ -86,6 +87,7 @@ $(function () {
     },
     {
       id: 2,
+      category: "poster",
       thum: "./images/thum/그라운드룰.jpg",
       title: "암웨이 Ground Rules 포스터",
       text: "Ground Rules 기본원칙 포스터",
@@ -94,6 +96,7 @@ $(function () {
     },
     {
       id: 3,
+      category: "leafleat",
       thum: "./images/thum/블랙야크.jpg",
       title: "블랙야크 제품카다로그",
       text: "블랙야크 안전화 및 안전용품에 관한 제품 카다로그 리플렛",
@@ -102,6 +105,7 @@ $(function () {
     },
     {
       id: 4,
+      category: "leafleat",
       thum: "./images/thum/행정심판.jpg",
       title: "행정심판 리플렛",
       text: "행정심판 제도에 관한 설명 및 접수방법 안내 리플렛",
@@ -111,6 +115,7 @@ $(function () {
     },
     {
       id: 5,
+      category: "leafleat",
       thum: "./images/thum/제주제2공항.jpg",
       title: "제주 제2공항 리플렛",
       text: "제주 제2공항 건설에 관한 설명 리플렛",
@@ -267,9 +272,7 @@ $(function () {
 
   // 포폴_썸네일 불러오기
   for (let i = 0; i < 포스터.length; i++) {
-    console.log(i);
     let 썸주소 = 포스터[i].thum;
-    console.log(썸주소);
 
     $(".thumnail>ol").append(
       $(`<li><a href="` + i + `" class="poster">` + i + `</a></li>`)
@@ -278,11 +281,27 @@ $(function () {
     $(".poster")
       .eq(i)
       .css({ backgroundImage: `url(` + 썸주소 + `)` });
+
+    let 타이틀 = 포스터[i].title;
+    let 텍스트 = 포스터[i].text;
+    let 날짜 = 포스터[i].date;
+
+    $("#popup .left>.pop_content").append(
+      $(
+        `<div class =` +
+          i +
+          `><h3 class='title'>` +
+          타이틀 +
+          `</h3><p class='text'>` +
+          텍스트 +
+          `</p><p class="data">` +
+          날짜 +
+          `</p></div>`
+      )
+    );
   }
   for (let i = 0; i < 브랜딩.length; i++) {
-    console.log(i);
     let 썸주소 = 브랜딩[i].thum;
-    console.log(썸주소);
 
     $(".thumnail>ol").append(
       $(`<li><a href="#" class="branding">` + i + `</a></li>`)
@@ -293,9 +312,7 @@ $(function () {
       .css({ backgroundImage: `url(` + 썸주소 + `)` });
   }
   for (let i = 0; i < 책.length; i++) {
-    console.log(i);
     let 썸주소 = 책[i].thum;
-    console.log(썸주소);
 
     $(".thumnail>ol").append(
       $(`<li><a href="#" class="book">` + i + `</a></li>`)
@@ -306,9 +323,7 @@ $(function () {
       .css({ backgroundImage: `url(` + 썸주소 + `)` });
   }
   for (let i = 0; i < 웹.length; i++) {
-    console.log(i);
     let 썸주소 = 웹[i].thum;
-    console.log(썸주소);
 
     $(".thumnail>ol").append(
       $(`<li><a href="#" class="web">` + i + `</a></li>`)
@@ -319,13 +334,19 @@ $(function () {
       .css({ backgroundImage: `url(` + 썸주소 + `)` });
   }
 
+  // 팝업_왼쪽내용 불러오기
+
   // 페이지네이션 poster를 누르면 ol>li class=poster 인 개체들만 불러오기? (남기고 나머지 삭제?)
 
   let $pagi = $(".pagination>ol a");
-  let $thumpic = $(".thumnail>ol a");
+  let $thumpposter = $(".thumnail>ol a.poster");
 
   // var $li = $(`<li><a href="#" class="thum"></a></li>`);
 
+  // 페이지 로드됐을때 all 보이기
+  $(document).ready(function () {
+    $pagi.eq(0).trigger("click");
+  });
   // 페이지네이션 클릭 시 원하는 썸네일들 보여주기
   $pagi.click(function (e) {
     e.preventDefault();
@@ -352,14 +373,210 @@ $(function () {
     }
   });
 
-  // 페이지 로드됐을때 all 보이기
-  $(document).ready(function () {
-    $pagi.eq(0).trigger("click");
+  let category = $(".thumnail>ol a").attr("class");
+
+  $("#popup .left>.pop_content").prepend($(`<h5>` + category + `</h5>`));
+
+  // 썸네일 정리
+  let scrollPosition = 0;
+  const body = document.querySelector("body");
+  // 팝업오픈
+  function enable() {
+    scrollPosition = window.pageYOffset;
+
+    $(body).css({
+      overflow: "hidden",
+      // posgition: "fixed",
+      top: "-${" + scrollPosition + "}px",
+      height: "100%",
+    });
+  }
+  // 팝업닫기
+  function disable() {
+    scrollPosition = window.pageYOffset;
+
+    $(body).css({
+      overflow: "auto",
+      // posgition: "initial",
+      top: "-${" + scrollPosition + "}px",
+      height: "auto",
+    });
+  }
+
+  $(".scrollbar").on("mousewheel", function (e) {
+    var wheelDelta = e.originalEvent.wheelDelta;
+
+    if (wheelDelta > 0) {
+      console.log("up");
+
+      $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+    } else {
+      console.log("down");
+
+      $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+    }
   });
 
+  // function wheel(좌우스크롤) {
+  //   scrollContainer.on("wheel", function (e) {
+  //     e.preventDefault();
+  //     var wheelDelta = e.wheelDelta;
+  //     if (wheelDelta > 0) {
+  //       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+  //     } else {
+  //       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+  //     }
+  //   });
+  // }
+
+  // $("html, body").css({ overflow: "auto", height: "auto" }).pageYOffset(1206);
+
   // 썸네일 클릭시 새 창 띄우기
-  $thumpic.click(function (e) {
+  https: $thumpposter.click(function (e) {
     e.preventDefault();
-    $("#popup").css({ display: "block" });
+
+    enable();
+    // 팝업창 보이기
+    $("#popup").css({ display: "block", top: scrollPosition + "px" });
+
+    $("#popup").css({
+      overflow: "auto",
+      height: "auto",
+    });
+
+    let thumhref = $(this).attr("href");
+    // let popclass = $("#popup .left>.pop_content>div").attr("class");
+
+    for (let i = 0; i < 포스터.length; i++) {
+      if (thumhref == i) {
+        $("#popup .left>.pop_content>div." + i)
+          .show()
+          .siblings("div")
+          .hide();
+      }
+    }
+
+    const scrollContainer = document.querySelector(".right");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
   });
+
+  // 팝업닫기
+  $("a.close").click(function (e) {
+    e.preventDefault();
+    // 검은배경(pop_bg), close버튼 눌렀을때 popup 닫기
+    $("#popup").css({ display: "none" }).removeClass(".modal-body");
+    disable();
+  });
+
+  // $("#scrollbar").on("mousewheel", function (e) {
+  //   var wheelDelta = e.originalEvent.wheelDelta;
+
+  //   if (wheelDelta > 0) {
+  //     console.log("up");
+
+  //     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+  //   } else {
+  //     console.log("down");
+
+  //     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+  //   }
+  // });
+
+  //   /*--------------------
+  // Wheel Option
+  // -------------------*/
+  //   let option = {
+  //     x: 0,
+  //     speed: 1.5,
+  //     limit: 2,
+  //     time: 0.3,
+  //   };
+
+  //   /*--------------------
+  // Init Scrollbar
+  // -------------------*/
+  //   const scrollbar = Scrollbar.init(document.querySelector("#scrollbar"), {
+  //     overscrollEffect: "bounce",
+  //     alwaysShowTracks: true,
+  //   });
+  //   const listener = (status) => {
+  //     console.log("scrollbar", status.offset.x);
+  //     active = parseInt(status.offset.x / 500);
+
+  //     bullets.forEach((b) => {
+  //       b.classList.remove("active");
+  //     });
+  //     bullets[active].classList.add("active");
+  //   };
+  //   scrollbar.addListener(listener);
+
+  //   /*--------------------
+  // Pagination
+  // -------------------*/
+  //   let active = 0;
+  //   let pag, bullets;
+
+  //   const pagination = () => {
+  //     const items = document.querySelectorAll(".item");
+  //     pag = document.createElement("div");
+  //     pag.classList.add("pagination");
+  //     items.forEach((item, i) => {
+  //       const bullet = document.createElement("button");
+  //       bullet.classList.add("bullet");
+  //       bullet.innerHTML = i;
+  //       pag.appendChild(bullet);
+  //     });
+  //     document.getElementById("scrollbar").appendChild(pag);
+  //     bullets = document.querySelectorAll(".bullet");
+
+  //     bullets.forEach((b, i) => {
+  //       b.addEventListener("click", (el) => {
+  //         bullets.forEach((el) => {
+  //           el.classList.remove("active");
+  //         });
+  //         el.target.classList.add("active");
+  //         const i = parseInt(el.target.innerHTML);
+  //         active = i;
+
+  //         let x = 500 * i;
+  //         if (x > scrollbar.limit.x) {
+  //           x = scrollbar.limit.x;
+  //         }
+
+  //         TweenMax.to(option, 1, {
+  //           x: x,
+  //           ease: Power4.easeOut,
+  //           onUpdate: () => {
+  //             window.console.log("option", option.x);
+  //             scrollbar.scrollTo(option.x, 0, 0);
+  //           },
+  //         });
+  //       });
+  //     });
+  //   };
+  //   pagination();
+
+  //   /*--------------------
+  // Mousewheel
+  // -------------------*/
+  //   const horizontalScroll = (e) => {
+  //     const y = parseInt(e.deltaY * option.speed);
+  //     let x = scrollbar.offset.x + y;
+  //     x = x < 0 ? 0 : x > scrollbar.limit.x ? scrollbar.limit.x : x;
+
+  //     TweenMax.to(option, option.time, {
+  //       x: x,
+  //       onUpdate: () => {
+  //         window.console.log("option", option.x);
+  //         scrollbar.scrollTo(option.x, 0, 0);
+  //       },
+  //     });
+  //   };
+  //   document.querySelector(".wrapper").addEventListener("mousewheel", (e) => {
+  //     horizontalScroll(e);
+  //   });
 });

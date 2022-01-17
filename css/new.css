@@ -4,11 +4,11 @@
   background-position: center center;
 }
 
-.transition, header > .hd_container > h1 > a.logo, header > .hd_container > nav > .gnb > li > a, header > .hd_container > a.total > span {
+.transition, header > .hd_container > h1 > a.logo, header > .hd_container > nav > .gnb > li > a, header > .hd_container > a.total > span, section#portfolio > .container > div > .thumnail > ol > li > a:after {
   transition: all ease-in-out 0.5s;
 }
 
-.flex, header > .hd_container, header > .hd_container > nav > .gnb, section.main > .container > .content > ol, section.me > .container, section.me > .container > .skill > div, section.me > .container > .skill > div.mo > ul, section#portfolio > .container > div > .pagination > ol, section#portfolio > .container > div > .thumnail > ol, section#contact .container, section#contact .container > .content > div > p {
+.flex, header > .hd_container, header > .hd_container > nav > .gnb, section.main > .container > .content > ol, section.me > .container, section.me > .container > .skill > div, section.me > .container > .skill > div.mo > ul, section#portfolio > .container > div > .pagination > ol, section#portfolio > .container > div > .thumnail > ol, #popup > .content, section#contact .container, section#contact .container > .content > div > p {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -22,6 +22,11 @@
 .mo_bm {
   width: 100%;
   margin: 0 20px;
+}
+
+.stop_scroll {
+  height: 100%;
+  overflow: hidden;
 }
 
 html {
@@ -546,6 +551,10 @@ section.me > .container > .skill > div.mo > ol > li > div > span.jv {
   width: 75%;
 }
 
+section#portfolio {
+  position: relative;
+}
+
 section#portfolio > .container {
   display: flex;
   justify-content: space-between;
@@ -623,54 +632,151 @@ section#portfolio > .container > div > .thumnail > ol {
 }
 
 section#portfolio > .container > div > .thumnail > ol > li > a {
+  position: relative;
   display: block;
   width: 120px;
   height: 120px;
   margin: 0 20px 25px 0;
   text-indent: -9999px;
-  border: 1px solid #222;
-  box-sizing: border-box;
+  background-size: contain;
+}
+
+section#portfolio > .container > div > .thumnail > ol > li > a:after {
+  opacity: 0;
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 120px;
+  text-indent: 0;
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+section#portfolio > .container > div > .thumnail > ol > li > a:hover::before, section#portfolio > .container > div > .thumnail > ol > li > a:hover::after {
+  opacity: 1;
 }
 
 #popup {
   display: none;
   position: absolute;
-  top: 0;
+  top: 1226px;
   left: 0;
   z-index: 99999;
   width: 100vw;
-  height: 250vh;
+  height: 100vh;
 }
 
 #popup > .pop_bg {
   width: 100vw;
-  height: 250vh;
+  height: 100vh;
   background-color: rgba(34, 34, 34, 0.7);
 }
 
-#popup > .pop_content {
+#popup > .content {
   position: absolute;
-  top: 1350px;
-  left: calc(50% - 40vw);
-  width: 80vw;
-  height: 80vh;
+  top: 100px;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 650px;
   padding: 8rem;
   background-color: #fff;
   box-sizing: border-box;
 }
 
-#popup > .pop_content > .left {
+#popup > .content > .left {
+  position: relative;
   width: 20%;
+  height: 100%;
 }
 
-#popup > .pop_content > .left > h5 {
+#popup > .content > .left > .pop_content > h5 {
   font-size: 1rem;
+  margin-bottom: 50px;
 }
 
-#popup > .pop_content > .left > h5:after {
+#popup > .content > .left > .pop_content > h5:after {
   content: "";
-  margin-top: 20px;
-  border: 1px solid #000;
+  display: block;
+  width: 100px;
+  margin-top: 10px;
+  border-bottom: 2px solid #000;
+}
+
+#popup > .content > .left > .pop_content div > h3 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#popup > .content > .left > .pop_content div > p.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#popup > .content > .left > .pop_content div > p.text::before {
+  content: "";
+  display: block;
+  width: 8px;
+  margin-bottom: 10px;
+  border-top: 3px solid #222;
+}
+
+#popup > .content > .left > .pop_content div > p.data {
+  color: #7a7a7a;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#popup > .content > .left > p > a.close {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 25px;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid #222;
+  box-sizing: border-box;
+}
+
+#popup > .content > .left > p > a.close:hover {
+  color: #fff;
+  background-color: #222;
+}
+
+#popup > .content > .right {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+#popup > .content > .right .scrollbar {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+#popup > .content > .right .scrollbar > .item {
+  width: 100%;
+  height: 100%;
+  background-color: #cc5151;
+}
+
+#popup > .content > .right .scrollbar > .item:nth-of-type(even) {
+  background-color: #fff;
 }
 
 section#contact {
