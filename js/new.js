@@ -73,65 +73,57 @@ $(function () {
   // 포폴_내용
   var 포스터 = [
     {
+      id: 0,
       thum: "./images/thum/주민기획.jpg",
       title: "주민기획 아이디어 워크숍 포스터",
       text: "도봉구청, 문화도시준비위에서 주관한 문화도시 만들기 포스터",
       date: "2018 / 2019",
-      item: [
-        {
-          0: "./images/right/주민기획1.jpg",
-          1: "./images/right/주민기획2.jpg",
-          2: "./images/right/주민기획3.jpg",
-        },
+      right: [
+        "./images/right/주민기획1.jpg",
+        "./images/right/주민기획2.jpg",
+        "./images/right/주민기획3.jpg",
       ],
     },
 
     {
-      id: 1,
-      category: "poster",
       thum: "./images/thum/주거니받거니.jpg",
       title: "주거니 받거니 포스터",
       text: "도봉구청, 문화도시준비위원회에서 주관한 문화특화지역 조성사업 포스터",
       date: "2018",
-      veiw: "",
+      right: ["./images/right/주거니받거니1.jpg"],
     },
     {
-      id: 2,
-      category: "poster",
       thum: "./images/thum/그라운드룰.jpg",
       title: "암웨이 Ground Rules 포스터",
       text: "Ground Rules 기본원칙 포스터",
       date: "2020",
-      veiw: "",
+      right: [
+        "./images/right/그라운드룰1.jpg",
+        "./images/right/그라운드룰2.jpg",
+      ],
     },
     {
-      id: 3,
-      category: "leafleat",
       thum: "./images/thum/블랙야크.jpg",
       title: "블랙야크 제품카다로그",
       text: "블랙야크 안전화 및 안전용품에 관한 제품 카다로그 리플렛",
       date: "2019 / 2020",
-      veiw: "",
+      right: ["./images/right/블랙야크1.jpg", "./images/right/블랙야크2.jpg"],
     },
     {
-      id: 4,
-      category: "leafleat",
       thum: "./images/thum/행정심판.jpg",
       title: "행정심판 리플렛",
       text: "행정심판 제도에 관한 설명 및 접수방법 안내 리플렛",
       contribute: "표지 쪽 3p 디자인",
       date: "2020",
-      veiw: "",
+      right: ["./images/right/행정심판1.jpg"],
     },
     {
-      id: 5,
-      category: "leafleat",
       thum: "./images/thum/제주제2공항.jpg",
       title: "제주 제2공항 리플렛",
       text: "제주 제2공항 건설에 관한 설명 리플렛",
       contribute: "표지 쪽 3p 디자인",
       date: "2019",
-      veiw: "",
+      right: ["./images/right/제주공항1.jpg"],
     },
   ];
 
@@ -283,14 +275,69 @@ $(function () {
   // 포폴_내용 불러오기
 
   // 포스터.forEach((element) => {});
+  // function 포스터내용(item) {
+  //   console.log(item);
+  // }
+
+  // 포스터.forEach((item, index) => {
+  //   console.log(item, index);
+  //   // console.log(포스터[index].right.length);
+
+  //   // 썸네일 a/href , claass 지정
+  //   $(".thumnail>ol").append(
+  //     $(`<li><a href="p` + index + `" class="poster"></a></li>`)
+  //   );
+  //   $(".poster")
+  //     .eq(index)
+  //     .css({ backgroundImage: `url(` + 포스터[index].thum + `)` });
+
+  //   $("#popup .left>.pop_content").append(
+  //     $(
+  //       `<div class = p` +
+  //         index +
+  //         `><h3 class='title'>` +
+  //         포스터[index].title +
+  //         `</h3><p class='text'>` +
+  //         포스터[index].text +
+  //         `</p><p class="data">` +
+  //         포스터[index].date +
+  //         `</p></div>`
+  //     )
+  //   );
+
+  //   for (let i = 0; i < 포스터.length; i++) {
+  //     for (let j = 0; j < 포스터[i].right.length; j++) {
+  //       console.log(포스터[i].right[j]);
+  //       $("#popup .right>.scrollbar").append(
+  //         $(`<li class = item p` + i + `></li>`).css({
+  //           backgroundImage: `url(` + 포스터[i].right[j] + `)`,
+  //         })
+  //       );
+  //     }
+  //   }
+
+  //   $("#popup .right>.scrollbar").append(
+  //     $(`<li class = item p` + index + `></li>`).css({
+  //       backgroundImage: `url(` + +`)`,
+  //     })
+  //   );
+  //   $("#popup .right>.scrollbar").css({
+  //     width: `calc(100% * ` + 포스터[index].right.length,
+  //   });
+
+  //   // function printright(right) {
+  //   //   console.log(right);
+  //   // }
+
+  //   // 포스터.right.forEach(printright);
+  // });
+
   for (let i = 0; i < 포스터.length; i++) {
     let 썸주소 = 포스터[i].thum;
     let 타이틀 = 포스터[i].title;
     let 텍스트 = 포스터[i].text;
     let 날짜 = 포스터[i].date;
-    let 아이템 = 포스터[i].item;
 
-    console.log(아이템);
     // 썸네일 a/href , claass 지정
     $(".thumnail>ol").append(
       $(`<li><a href="p` + i + `" class="poster"></a></li>`)
@@ -315,9 +362,29 @@ $(function () {
       )
     );
 
-    $("#popup .right>.scrollbar").append(
-      $(`<li class = item p` + i + `>p` + i + `</li>`)
-    );
+    for (let j = 0; j < 포스터[i].right.length; j++) {
+      console.log(포스터[i].right[j].length);
+      $("#popup .right>.scrollbar").append(
+        $(`<li class = "item p` + i + `"></li>`)
+      );
+      // $("#popup .right>.scrollbar").append(
+      //   $(`<li class = item p` + i + `></li>`).css({
+      //     backgroundImage: `url(` + 포스터[i].right[j] + `)`,
+      //     width: `calc(100 * ` + 포스터[i].right[j].length + `)`,
+      //   })
+      // );
+    }
+
+    // $("#popup .right>.scrollbar").append(
+    //   $(`<li class = item p` + index + `></li>`).css({
+    //     backgroundImage: `url(` + +`)`,
+    //     width: `calc(100% * ` + 포스터[i].right.length,
+    //   })
+    // );
+
+    // $("#popup .right>.scrollbar").append(
+    //   $(`<li class = item p` + i + `>p` + i + `</li>`)
+    // );
   }
   for (let i = 0; i < 브랜딩.length; i++) {
     let 썸주소 = 브랜딩[i].thum;
@@ -513,6 +580,18 @@ $(function () {
       if (썸클릭 == "p" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.p` + i).show();
+        $("#popup .right>.scrollbar> li").hide();
+        $(`#popup .right>.scrollbar> li.p` + i).show();
+
+        for (let j = 0; j < 포스터[i].right.length; j++) {
+          $("#popup .right>.scrollbar").css({
+            width: `calc(588px * ` + 3 + `)`,
+          });
+          $("#popup .right>.scrollbar> li.item").css({
+            backgroundImage: `url(` + 포스터[i].right[j] + `)`,
+            width: "588px",
+          });
+        }
       } else if (썸클릭 == "b" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.b` + i).show();
