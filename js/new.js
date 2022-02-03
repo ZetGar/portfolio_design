@@ -92,6 +92,7 @@ $(function () {
       date: "2018",
       right: ["./images/right/주거니받거니1.jpg"],
     },
+
     {
       thum: "./images/thum/그라운드룰.jpg",
       title: "암웨이 Ground Rules 포스터",
@@ -102,6 +103,7 @@ $(function () {
         "./images/right/그라운드룰2.jpg",
       ],
     },
+
     {
       thum: "./images/thum/블랙야크.jpg",
       title: "블랙야크 제품카다로그",
@@ -109,6 +111,7 @@ $(function () {
       date: "2019 / 2020",
       right: ["./images/right/블랙야크1.jpg", "./images/right/블랙야크2.jpg"],
     },
+
     {
       thum: "./images/thum/행정심판.jpg",
       title: "행정심판 리플렛",
@@ -117,6 +120,7 @@ $(function () {
       date: "2020",
       right: ["./images/right/행정심판1.jpg"],
     },
+
     {
       thum: "./images/thum/제주제2공항.jpg",
       title: "제주 제2공항 리플렛",
@@ -134,7 +138,11 @@ $(function () {
       title: "위드랜드",
       text: "반려동물과 함께 가는 호텔 로고 제작 및 서류 제작",
       date: "2019",
-      veiw: "",
+      right: [
+        "./images/right/위드랜드1.jpg",
+        "./images/right/위드랜드2.jpg",
+        "./images/right/위드랜드3.jpg",
+      ],
     },
     {
       id: 1,
@@ -142,7 +150,11 @@ $(function () {
       title: "뉴커런츠",
       text: "유튜브 기획, 영상편집 아카데미 브랜딩, 로고 제작",
       date: "2019",
-      veiw: "",
+      right: [
+        "./images/right/뉴커런츠1.jpg",
+        "./images/right/뉴커런츠2.jpg",
+        "./images/right/뉴커런츠3.jpg",
+      ],
     },
     {
       id: 2,
@@ -150,7 +162,10 @@ $(function () {
       title: "암웨이 코어 플러스",
       text: "코어 플러스에 사용되는 브랜딩 기획 및 제작",
       date: "2020",
-      veiw: "",
+      right: [
+        "./images/right/코어플러스1.jpg",
+        "./images/right/코어플러스2.jpg",
+      ],
     },
     {
       id: 3,
@@ -158,7 +173,7 @@ $(function () {
       title: "CFS",
       text: "코로나로 인해 소규모로 진행, 배너와 종이컵만 제작",
       date: "2020",
-      veiw: "",
+      right: ["./images/right/cfs1.jpg", "./images/right/cfs2.jpg"],
     },
     {
       id: 4,
@@ -166,7 +181,11 @@ $(function () {
       title: "배틀그라운드",
       text: "초대장, 배너, 현수막, 명찰, 명찰목걸이 등 행사에 필요한 디자인 작업",
       date: "2018",
-      veiw: "",
+      right: [
+        "./images/right/펍지1.jpg",
+        "./images/right/펍지2.jpg",
+        "./images/right/펍지3.jpg",
+      ],
     },
     {
       id: 5,
@@ -174,7 +193,12 @@ $(function () {
       title: "암웨이 ABO",
       text: "백월, 배너, 현수막, 명찰, 명찰목걸이 등 행사에 필요한 디자인 작업",
       date: "2019",
-      veiw: "",
+      right: [
+        "./images/right/abo1.jpg",
+        "./images/right/abo2.jpg",
+        "./images/right/abo3.jpg",
+        "./images/right/abo4.jpg",
+      ],
     },
   ];
 
@@ -185,7 +209,13 @@ $(function () {
       title: "백일우",
       text: "목인 작가님의 웹툰 작업 및 인쇄, 펀딩 상세페이지, 부록, 틴케이스, 스티커 작업",
       date: "2020",
-      veiw: "",
+      right: [
+        "./images/right/백일우1.jpg",
+        "./images/right/백일우2.jpg",
+        "./images/right/백일우3.jpg",
+        "./images/right/백일우4.jpg",
+        "./images/right/백일우5.jpg",
+      ],
     },
     {
       id: 1,
@@ -193,7 +223,10 @@ $(function () {
       title: "KOSSA 연차보고서",
       text: "특수판매공제조합 연차보고서",
       date: "2020",
-      veiw: "",
+      right: [
+        "./images/right/특판애뉴얼1.jpg",
+        "./images/right/특판애뉴얼2.jpg",
+      ],
     },
     {
       id: 2,
@@ -201,7 +234,11 @@ $(function () {
       title: "애터미 글로벌 매거진",
       text: "표지, 내지 앞부분 디자인 (+ 뒷부분은 다른 업체에서 작업)",
       date: "2019",
-      veiw: "",
+      right: [
+        "./images/right/글로벌매거진1.jpg",
+        "./images/right/글로벌매거진2.jpg",
+        "./images/right/글로벌매거진3.jpg",
+      ],
     },
     {
       id: 3,
@@ -209,7 +246,10 @@ $(function () {
       title: "애터미언즈 매거진",
       text: "애터미 회원들의 인터뷰 매거진",
       date: "2019",
-      veiw: "",
+      right: [
+        "./images/right/애터미언즈1.jpg",
+        "./images/right/애터미언즈2.jpg",
+      ],
     },
     {
       id: 4,
@@ -217,7 +257,7 @@ $(function () {
       title: "하나바스 제품 카다로그",
       text: "표지, 내지 디자인 및 합성컷 작업",
       date: "2019",
-      veiw: "",
+      right: ["./images/right/하나바스1.jpg", "./images/right/하나바스2.jpg"],
     },
   ];
 
@@ -228,7 +268,7 @@ $(function () {
       title: "직접판매공제조합 웨비나 이벤트",
       text: "서부의 느낌을 살려 합성 및 디자인, 2가지 버전",
       date: "2020",
-      veiw: "",
+      right: ["./images/right/웨비나1.jpg"],
     },
     {
       id: 1,
@@ -236,7 +276,7 @@ $(function () {
       title: "직접판매공제조합 카카오톡 플러스친구 이벤트",
       text: "카카오톡의 색감을 사용한 직관적 디자인, 웹사이트 게시용, 조기마감 안내용, 문자 쿠폰용",
       date: "2020",
-      veiw: "",
+      right: ["./images/right/직판카톡플친1.jpg"],
     },
     {
       id: 2,
@@ -244,7 +284,7 @@ $(function () {
       title: "직접판매공제조합 속닥속닥 이벤트",
       text: "아기자기한 느낌으로 친근하고 따뜻한 색감의 디자인",
       date: "2020",
-      veiw: "",
+      right: ["./images/right/속닥속닥1.jpg"],
     },
     {
       id: 3,
@@ -252,7 +292,7 @@ $(function () {
       title: "국제나은병원 SNS",
       text: "SNS에 게시하는 월별 건강이야기 디자인",
       date: "2019",
-      veiw: "",
+      right: ["./images/right/국제나은1.jpg"],
     },
     {
       id: 4,
@@ -260,7 +300,7 @@ $(function () {
       title: "미래에셋대우 해외주식",
       text: "해외주식거래 홍보 이벤트디자인, pc용, 모바일용으로 제작",
       date: "2018",
-      veiw: "",
+      right: ["./images/right/미래에셋1.jpg"],
     },
     {
       id: 5,
@@ -268,7 +308,7 @@ $(function () {
       title: "전국투자자교육협의회 웹북, 블로그",
       text: "블로그에 올리는 글 메인 이미지 및 내용에 맞는 인포그래픽",
       date: "2018",
-      veiw: "",
+      right: ["./images/right/한투블로그1.jpg"],
     },
   ];
 
@@ -279,207 +319,176 @@ $(function () {
   //   console.log(item);
   // }
 
-  // 포스터.forEach((item, index) => {
-  //   console.log(item, index);
-  //   // console.log(포스터[index].right.length);
-
-  //   // 썸네일 a/href , claass 지정
-  //   $(".thumnail>ol").append(
-  //     $(`<li><a href="p` + index + `" class="poster"></a></li>`)
-  //   );
-  //   $(".poster")
-  //     .eq(index)
-  //     .css({ backgroundImage: `url(` + 포스터[index].thum + `)` });
-
-  //   $("#popup .left>.pop_content").append(
-  //     $(
-  //       `<div class = p` +
-  //         index +
-  //         `><h3 class='title'>` +
-  //         포스터[index].title +
-  //         `</h3><p class='text'>` +
-  //         포스터[index].text +
-  //         `</p><p class="data">` +
-  //         포스터[index].date +
-  //         `</p></div>`
-  //     )
-  //   );
-
-  //   for (let i = 0; i < 포스터.length; i++) {
-  //     for (let j = 0; j < 포스터[i].right.length; j++) {
-  //       console.log(포스터[i].right[j]);
-  //       $("#popup .right>.scrollbar").append(
-  //         $(`<li class = item p` + i + `></li>`).css({
-  //           backgroundImage: `url(` + 포스터[i].right[j] + `)`,
-  //         })
-  //       );
-  //     }
-  //   }
-
-  //   $("#popup .right>.scrollbar").append(
-  //     $(`<li class = item p` + index + `></li>`).css({
-  //       backgroundImage: `url(` + +`)`,
-  //     })
-  //   );
-  //   $("#popup .right>.scrollbar").css({
-  //     width: `calc(100% * ` + 포스터[index].right.length,
-  //   });
-
-  //   // function printright(right) {
-  //   //   console.log(right);
-  //   // }
-
-  //   // 포스터.right.forEach(printright);
-  // });
-
-  for (let i = 0; i < 포스터.length; i++) {
-    let 썸주소 = 포스터[i].thum;
-    let 타이틀 = 포스터[i].title;
-    let 텍스트 = 포스터[i].text;
-    let 날짜 = 포스터[i].date;
-
+  포스터.forEach((item, index) => {
     // 썸네일 a/href , claass 지정
     $(".thumnail>ol").append(
-      $(`<li><a href="p` + i + `" class="poster"></a></li>`)
+      $(`<li><a href="p` + index + `" class="poster"></a></li>`)
     );
 
-    // 썸네일 넣기
     $(".poster")
-      .eq(i)
-      .css({ backgroundImage: `url(` + 썸주소 + `)` });
+      .eq(index)
+      .css({ backgroundImage: `url(` + 포스터[index].thum + `)` });
 
     $("#popup .left>.pop_content").append(
       $(
         `<div class = p` +
-          i +
+          index +
           `><h3 class='title'>` +
-          타이틀 +
+          포스터[index].title +
           `</h3><p class='text'>` +
-          텍스트 +
+          포스터[index].text +
           `</p><p class="data">` +
-          날짜 +
+          포스터[index].date +
           `</p></div>`
       )
     );
 
-    for (let j = 0; j < 포스터[i].right.length; j++) {
-      console.log(포스터[i].right[j].length);
+    let right = 포스터[index].right;
+
+    for (let i = 0; i < right.length; i++) {
+      console.log(right[i]);
+
+      let class_cnt = $(".thumnail>ol>li>a").attr("href");
+      let class_cnt2 = $(".scrollbar>li").attr("class");
+      console.log(class_cnt);
+      console.log(class_cnt2);
+
       $("#popup .right>.scrollbar").append(
-        $(`<li class = "item p` + i + `"></li>`)
+        $(`<li class = "item p` + index + `"></li>`).css({
+          backgroundImage: `url(` + right[i] + `)`,
+        })
       );
-      // $("#popup .right>.scrollbar").append(
-      //   $(`<li class = item p` + i + `></li>`).css({
-      //     backgroundImage: `url(` + 포스터[i].right[j] + `)`,
-      //     width: `calc(100 * ` + 포스터[i].right[j].length + `)`,
-      //   })
-      // );
     }
+  });
 
-    // $("#popup .right>.scrollbar").append(
-    //   $(`<li class = item p` + index + `></li>`).css({
-    //     backgroundImage: `url(` + +`)`,
-    //     width: `calc(100% * ` + 포스터[i].right.length,
-    //   })
-    // );
-
-    // $("#popup .right>.scrollbar").append(
-    //   $(`<li class = item p` + i + `>p` + i + `</li>`)
-    // );
-  }
-  for (let i = 0; i < 브랜딩.length; i++) {
-    let 썸주소 = 브랜딩[i].thum;
-    let 타이틀 = 브랜딩[i].title;
-    let 텍스트 = 브랜딩[i].text;
-    let 날짜 = 브랜딩[i].date;
-
+  브랜딩.forEach((item, index) => {
     // 썸네일 a/href , claass 지정
     $(".thumnail>ol").append(
-      $(`<li><a href="b` + i + `" class="branding"></a></li>`)
+      $(`<li><a href="b` + index + `" class="branding"></a></li>`)
     );
 
-    // 썸네일 넣기
     $(".branding")
-      .eq(i)
-      .css({ backgroundImage: `url(` + 썸주소 + `)` });
+      .eq(index)
+      .css({ backgroundImage: `url(` + 브랜딩[index].thum + `)` });
 
     $("#popup .left>.pop_content").append(
       $(
         `<div class = b` +
-          i +
+          index +
           `><h3 class='title'>` +
-          타이틀 +
+          브랜딩[index].title +
           `</h3><p class='text'>` +
-          텍스트 +
+          브랜딩[index].text +
           `</p><p class="data">` +
-          날짜 +
-          `</b></div>`
+          브랜딩[index].date +
+          `</p></div>`
       )
     );
-  }
-  for (let i = 0; i < 책.length; i++) {
-    let 썸주소 = 책[i].thum;
-    let 타이틀 = 책[i].title;
-    let 텍스트 = 책[i].text;
-    let 날짜 = 책[i].date;
 
+    let right = 브랜딩[index].right;
+
+    for (let i = 0; i < right.length; i++) {
+      console.log(right[i]);
+
+      let class_cnt = $(".thumnail>ol>li>a").attr("href");
+      let class_cnt2 = $(".scrollbar>li").attr("class");
+      console.log(class_cnt);
+      console.log(class_cnt2);
+
+      $("#popup .right>.scrollbar").append(
+        $(`<li class = "item b` + index + `"></li>`).css({
+          backgroundImage: `url(` + right[i] + `)`,
+        })
+      );
+    }
+  });
+
+  책.forEach((item, index) => {
     // 썸네일 a/href , claass 지정
     $(".thumnail>ol").append(
-      $(`<li><a href="bk` + i + `" class="book"></a></li>`)
+      $(`<li><a href="bk` + index + `" class="book"></a></li>`)
     );
 
-    // 썸네일 넣기
     $(".book")
-      .eq(i)
-      .css({ backgroundImage: `url(` + 썸주소 + `)` });
+      .eq(index)
+      .css({ backgroundImage: `url(` + 책[index].thum + `)` });
 
     $("#popup .left>.pop_content").append(
       $(
         `<div class = bk` +
-          i +
+          index +
           `><h3 class='title'>` +
-          타이틀 +
+          책[index].title +
           `</h3><p class='text'>` +
-          텍스트 +
+          책[index].text +
           `</p><p class="data">` +
-          날짜 +
-          `</b></div>`
+          책[index].date +
+          `</p></div>`
       )
     );
-  }
-  for (let i = 0; i < 웹.length; i++) {
-    let 썸주소 = 웹[i].thum;
-    let 타이틀 = 웹[i].title;
-    let 텍스트 = 웹[i].text;
-    let 날짜 = 웹[i].date;
 
+    let right = 책[index].right;
+
+    for (let i = 0; i < right.length; i++) {
+      console.log(right[i]);
+
+      let class_cnt = $(".thumnail>ol>li>a").attr("href");
+      let class_cnt2 = $(".scrollbar>li").attr("class");
+      console.log(class_cnt);
+      console.log(class_cnt2);
+
+      $("#popup .right>.scrollbar").append(
+        $(`<li class = "item bk` + index + `"></li>`).css({
+          backgroundImage: `url(` + right[i] + `)`,
+        })
+      );
+    }
+  });
+
+  웹.forEach((item, index) => {
     // 썸네일 a/href , claass 지정
     $(".thumnail>ol").append(
-      $(`<li><a href="w` + i + `" class="web"></a></li>`)
+      $(`<li><a href="w` + index + `" class="web"></a></li>`)
     );
 
-    // 썸네일 넣기
     $(".web")
-      .eq(i)
-      .css({ backgroundImage: `url(` + 썸주소 + `)` });
+      .eq(index)
+      .css({ backgroundImage: `url(` + 웹[index].thum + `)` });
 
     $("#popup .left>.pop_content").append(
       $(
         `<div class = w` +
-          i +
+          index +
           `><h3 class='title'>` +
-          타이틀 +
+          웹[index].title +
           `</h3><p class='text'>` +
-          텍스트 +
+          웹[index].text +
           `</p><p class="data">` +
-          날짜 +
-          `</b></div>`
+          웹[index].date +
+          `</p></div>`
       )
     );
-  }
+
+    let right = 웹[index].right;
+
+    for (let i = 0; i < right.length; i++) {
+      console.log(right[i]);
+
+      let class_cnt = $(".thumnail>ol>li>a").attr("href");
+      let class_cnt2 = $(".scrollbar>li").attr("class");
+      console.log(class_cnt);
+      console.log(class_cnt2);
+
+      $("#popup .right>.scrollbar").append(
+        $(`<li class = "item w` + index + `"></li>`).css({
+          backgroundImage: `url(` + right[i] + `)`,
+        })
+      );
+    }
+  });
 
   let $pagi = $(".pagination>ol a");
   let $thum = $(".thumnail>ol a");
-  // let $thum = $(".thumnail>ol a.poster");
   let category = $(".thumnail>ol a").attr("class");
   // 팝업 오픈,클로즈
   let scrollPosition = 0;
@@ -580,31 +589,41 @@ $(function () {
       if (썸클릭 == "p" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.p` + i).show();
-        $("#popup .right>.scrollbar> li").hide();
-        $(`#popup .right>.scrollbar> li.p` + i).show();
-
-        for (let j = 0; j < 포스터[i].right.length; j++) {
-          $("#popup .right>.scrollbar").css({
-            width: `calc(588px * ` + 3 + `)`,
-          });
-          $("#popup .right>.scrollbar> li.item").css({
-            backgroundImage: `url(` + 포스터[i].right[j] + `)`,
-            width: "588px",
-          });
-        }
+        // 팝업창 내 우측부분 내용추가
+        $(".scrollbar > li").hide();
+        $(`.scrollbar > li.p` + i).show();
+        $(`.scrollbar`).css({
+          width: `calc(588px * ` + $(`.scrollbar > li.p` + i).length + `)`,
+        });
       } else if (썸클릭 == "b" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.b` + i).show();
+        // 팝업창 내 우측부분 내용추가
+        $(".scrollbar > li").hide();
+        $(`.scrollbar > li.b` + i).show();
+        $(`.scrollbar`).css({
+          width: `calc(588px * ` + $(`.scrollbar > li.b` + i).length + `)`,
+        });
       } else if (썸클릭 == "bk" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.bk` + i).show();
+        // 팝업창 내 우측부분 내용추가
+        $(".scrollbar > li").hide();
+        $(`.scrollbar > li.bk` + i).show();
+        $(`.scrollbar`).css({
+          width: `calc(588px * ` + $(`.scrollbar > li.bk` + i).length + `)`,
+        });
       } else if (썸클릭 == "w" + i) {
         $(".pop_content>div").hide();
         $(`.pop_content>div.w` + i).show();
+        // 팝업창 내 우측부분 내용추가
+        $(".scrollbar > li").hide();
+        $(`.scrollbar > li.w` + i).show();
+        $(`.scrollbar`).css({
+          width: `calc(588px * ` + $(`.scrollbar > li.w` + i).length + `)`,
+        });
       }
     }
-
-    // 팝업창 내 우측부분 내용추가
   });
 
   // 팝업닫기
