@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 #wrap {
@@ -287,8 +288,9 @@ section > .container h5:after {
 }
 
 section.main {
+  position: relative;
   background: fixed;
-  background-image: url(./../images/mary-skrynnikova-H_8zn9NVoWw-unsplash.jpg);
+  background-image: url(./../images/texture-gd5c0a1cb7_1920.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -298,6 +300,10 @@ section.main > .container {
   width: 100vw;
   height: 600px;
   overflow: hidden;
+}
+
+section.main > .container > .content {
+  margin: 0 auto;
 }
 
 section.main > .container > .content > h2 {
